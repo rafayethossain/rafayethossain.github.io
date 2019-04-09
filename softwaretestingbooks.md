@@ -1,7 +1,8 @@
 # Software Testing Books Collection
-####  That Every Tester Should Have If They Want to Start * Career in Testing * 
+######  That Every Tester Should Have If They Want to Start
+**Career in Testing** 
 ### Let's get some software testing Ebooks and free download link.
-#### Some of the download link might not work but you should not worry as there are lots of good link for downloading software testing book than new need.  
+*Some of the download link might not work but you should not worry as there are lots of good link for downloading software testing book than new need.  
 
 * [Software testing theory](#software-testing-theory)
 * [Standards in software testing](#standards-in-software-testing)
