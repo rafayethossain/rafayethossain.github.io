@@ -1,4 +1,7 @@
-#Index
+# Necessary Software Testing Books That Every Tester Should Have If They Want to Start Career in Testing 
+### Let's get some software testing Ebooks and free download link.
+#### Some of the download link might not work but you should not worry as there are lots of good link for downloading software testing book than new need.  
+
 * [Software testing theory](#software-testing-theory)
 * [Standards in software testing](#standards-in-software-testing)
 * [Testing of Free and OpenSource Software](#testing-of-free-and-opensource-software)
@@ -6,7 +9,7 @@
 * [Testing Tools](#testing-tools)
 
 
-####Software testing theory
+#### Software testing theory
 * [Acceptance Test Engineering Guide, Vol. I - RC1](https://testingguidance.codeplex.com/)
 * [A Software Testing Primer](http://www.nickjenkins.net/prose/testingPrimer.pdf) (PDF)
 * [A Software Testing Primer](http://www.softwaretestinghelp.com/software-testing-book-download/) - Nick Jenkins
@@ -37,18 +40,18 @@
 * [What If: 50+ tips to improve tester-programmer relationship](http://enjoytesting.files.wordpress.com/2013/10/50-tips-to-improve-tester-programmer-relationship.pdf) (PDF) - Ajay Balamurugadas
 
 
-####Standards in software testing
+#### Standards in software testing
 * [Testing Standards Working Party](http://www.testingstandards.co.uk/)
 * [The International Software Testing Standard](http://softwaretestingstandard.org/)
 * [Standard for Software Component Testing](http://www.testingstandards.co.uk/Component%20Testing.pdf) (PDF)
 
 
-####Testing of Free and OpenSource Software
+#### Testing of Free and OpenSource Software
 * [Quality Improvement in Volunteer Free and Open Source Software Project](http://www.cyrius.com/publications/michlmayr-phd.pdf) (PDF)
 * [Testing and quality management of free and open source software](https://github.com/ligurio/tos-book) - Sergey Bronnikov
 
 
-####Testing with different programming languages
+#### Testing with different programming languages
 * [PHPUnit PHP Test-Driven Development - Automated Tools to Improve Your PHP Code Quality](http://refcardz.dzone.com/refcardz/phpunit-php-test-driven)
 * [Practical PHP testing](http://www.giorgiosironi.com/2009/12/practical-php-testing-is-here.html)
 * [Testing Erlang](https://github.com/zkessin/testing-erlang-book)
@@ -59,7 +62,7 @@
 * [Web Application Testing in Ruby](https://leanpub.com/watirbook/read) Željko Filipin
 
 
-####Testing Tools
+#### Testing Tools
 * [AccelTest](http://www.lausd.net/istem/2know_files/Software_Manual.pdf) (PDF)
 * [A Step-by-Step Guide to Functional Testing with TestComplete](http://www2.smartbear.com/download-mqi-inbound-testcomplete-functional-testing-top-5-ebook-blog.html)
 * [Building and testing with Gradle](http://www.gradleware.com/registered-access?content=books%2Fbuilding-and-testing%2F)
@@ -71,3 +74,5 @@
 * [SoapUI 101: Beginner's Guide to Functional Testing](http://www2.smartbear.com/download-mqi-nbound-soapui-top-5-blast-ebook-blog.html)
 * [TestNG Tutorial](http://www.tutorialspoint.com/testng/index.htm)
 * [JUnit Tutorial](http://www.tutorialspoint.com/junit/index.htm)
+
+## Feel free to share with your friends and others 
