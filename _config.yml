@@ -27,7 +27,7 @@ navbar-links:
   Archive:
       - Tag cloud: "tags"
       - Subscribe: "subscribe"
-      - Areas of Expertise: areasexpertise
+      - Areas of Expertise: "areasexpertise"
   Resume: "https://rafayet13.github.io/Resume/"
   About Me: "aboutme"
   Search: "search"
