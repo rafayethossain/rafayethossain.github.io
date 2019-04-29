@@ -5,7 +5,7 @@ title: Rafayet Hossain
 subtitle: Big Data Analyst, SQA, Web Programmer, Writer & Internet Addict
 
 #bigimg:
-#  - /img/platforms.png: I work on all platforms, yes I do ;)
+#  - /img/back.gif: I work on all platforms, yes I do ;)
 ---
 <script src="https://use.typekit.net/nyt3toc.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
