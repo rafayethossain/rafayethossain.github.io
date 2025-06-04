@@ -11,58 +11,92 @@ permalink: /404.html
   <title>404: Page Not Found | {{ site.title }}</title>
   <style>
     body {
-      background: #fff;
-      color: #404040;
-      font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
       min-height: 100vh;
       margin: 0;
+      font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      color: #222;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .container {
+      background: rgba(255,255,255,0.95);
+      border-radius: 24px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+      padding: 3rem 2.5rem 2.5rem 2.5rem;
       text-align: center;
-      padding: 2rem;
+      max-width: 400px;
+      width: 100%;
     }
     .logo {
-      width: 80px;
-      height: 80px;
+      width: 72px;
+      height: 72px;
       border-radius: 50%;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.2rem;
       object-fit: cover;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      border: 2px solid #e0e7ef;
+    }
+    .illustration {
+      width: 120px;
+      margin-bottom: 1.5rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
     h1 {
-      font-size: 2.5rem;
-      margin: 0 0 1rem 0;
+      font-size: 2.2rem;
+      margin: 0 0 0.7rem 0;
       color: #008AFF;
+      font-weight: 700;
+      letter-spacing: -1px;
     }
     p {
-      color: #555;
-      margin-bottom: 2rem;
+      color: #444;
+      margin-bottom: 2.2rem;
+      font-size: 1.08rem;
+      line-height: 1.6;
     }
     a.button {
       display: inline-block;
-      padding: 0.75rem 2rem;
-      background: #008AFF;
+      padding: 0.8rem 2.2rem;
+      background: linear-gradient(90deg, #008AFF 60%, #00C6FB 100%);
       color: #fff;
       border-radius: 24px;
       text-decoration: none;
-      font-weight: 500;
-      transition: background 0.2s;
+      font-weight: 600;
+      font-size: 1rem;
+      box-shadow: 0 2px 8px rgba(0,138,255,0.08);
+      transition: background 0.2s, box-shadow 0.2s;
     }
     a.button:hover {
-      background: #005fa3;
+      background: linear-gradient(90deg, #005fa3 60%, #008AFF 100%);
+      box-shadow: 0 4px 16px rgba(0,138,255,0.13);
+    }
+    @media (max-width: 500px) {
+      .container {
+        padding: 2rem 1rem 1.5rem 1rem;
+      }
+      .illustration {
+        width: 90px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <img src="/assets/img/my-avatar.png" alt="{{ site.title }} logo" class="logo" loading="lazy">
+    <svg class="illustration" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="60" cy="60" r="56" fill="#E3F0FF"/>
+      <path d="M40 80c0-11 9-20 20-20s20 9 20 20" stroke="#008AFF" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="50" cy="54" r="4" fill="#008AFF"/>
+      <circle cx="70" cy="54" r="4" fill="#008AFF"/>
+      <rect x="54" y="68" width="12" height="4" rx="2" fill="#008AFF"/>
+    </svg>
     <h1>404 - Page Not Found</h1>
     <p>Sorry, the page you are looking for doesn’t exist or has been moved.<br>
-    Go back to the homepage or explore other content.</p>
+    You can return to the homepage or explore other content.</p>
     <a href="/" class="button">Back to Home</a>
   </div>
 </body>
