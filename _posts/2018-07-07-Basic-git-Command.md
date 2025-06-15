@@ -1,12 +1,20 @@
 ---
 layout: post
-title: Basic Git Commands
-subtitle: Git Command You Will Ever Need as a Programmer
+title: "Basic Git Commands"
+subtitle: "Git Command You Will Ever Need as a Programmer"
+date: 2018-07-07
+author: "Rafayet Hossain"
+description: "A comprehensive guide to essential Git commands for programmers, covering setup, usage, and best practices for version control."
+tags: [git, version control, programming]
+categories: [development, tools]
 cover-img: /assets/img/cover.jpg
 thumbnail-img: /assets/img/diary.png
 share-img: /assets/img/path.jpg
-tags: [git, git command]
-description: "Git is a tool for managing versions of directories between local and remote locations. It is a version control system that efficiently manages projects and enables collaboration among developers."
+image: /assets/img/cover.jpg
+bigimg: /assets/img/cover.jpg
+permalink: /basic-git-commands/
+canonical_url: https://rafayethossain.github.io/basic-git-commands/
+meta_keywords: "git, version control, git commands, programming, software development"
 ---
 
 Git is a tool for managing versions of directories between local and remote (cloud) locations. It is a version control system that can efficiently manage small to very large projects and is free and open-source. Git is a tool used to log source code changes, allowing several engineers to collaborate on non-linear development.

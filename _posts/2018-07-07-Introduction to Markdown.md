@@ -1,13 +1,20 @@
 ---
 layout: post
-title: Basic Markdown for Beginners 
-subtitle: Markdown Basic You Must Know
-tags: [markdown]
-image: /assets/img/diary.png
-thumbnail-img: /assets/img/diary.png
-bigimg: /assets/img/background.png
-share-img: /assets/img/diary.png
+title: "Basic Markdown for Beginners"
+subtitle: "Markdown Basics You Must Know"
+date: 2018-07-07
+author: "Rafayet Hossain"
+description: "A practical guide to Markdown syntax for beginners, including cheatsheets, formatting, and productivity tips."
+tags: [markdown, cheatsheet, productivity]
+categories: [writing, tools]
 cover-img: /assets/img/cover.jpg
+thumbnail-img: /assets/img/diary.png
+share-img: /assets/img/diary.png
+image: /assets/img/diary.png
+bigimg: /assets/img/background.png
+permalink: /basic-markdown-for-beginners/
+canonical_url: https://rafayethossain.github.io/basic-markdown-for-beginners/
+meta_keywords: "markdown, markdown guide, cheatsheet, writing, productivity"
 toc: true
 toc_float: true
 ---

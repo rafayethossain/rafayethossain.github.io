@@ -1,13 +1,20 @@
 ---
 layout: post
-title: Introduction to Software Testing 
-subtitle: A beginner's guide to software testing
-tags: [software testing,SQA]
-image: /img/diary.png
-thumbnail-img: /assets/img/diary.png
-bigimg: /img/cover.jpg
-share-img: /img/diary.png
+title: "Introduction to Software Testing"
+subtitle: "A beginner's guide to software testing"
+date: 2018-08-05
+author: "Rafayet Hossain"
+description: "A comprehensive beginner's guide to software testing, covering types, importance, validation, verification, and best practices for quality software."
+tags: [software testing, SQA, quality assurance, beginner]
+categories: [testing, software development]
 cover-img: /assets/img/cover.jpg
+thumbnail-img: /assets/img/diary.png
+share-img: /assets/img/diary.png
+image: /assets/img/cover.jpg
+bigimg: /assets/img/cover.jpg
+permalink: /introduction-to-software-testing/
+canonical_url: https://rafayethossain.github.io/introduction-to-software-testing/
+meta_keywords: "software testing, SQA, quality assurance, software development, beginner guide"
 ---
 
 
