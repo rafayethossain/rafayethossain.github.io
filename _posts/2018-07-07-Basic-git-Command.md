@@ -133,6 +133,8 @@ Happy coding—and may your commits always be clean!
 
 ---
 
+{% include buymeacoffee.html %}
+
 {% include about-creator.html %}
 
 {: .box-success}
