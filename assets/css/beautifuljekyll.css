@@ -7,21 +7,37 @@ layout: null
 :root {
   /* config file CSS variables - improved for accessibility */
   --page-col: {{ site.page-col | default: "#FFFFFF" }};
-  --text-col: {{ site.text-col | default: "#222222" }}; /* darker for better contrast */
-  --link-col: {{ site.link-col | default: "#0056B3" }}; /* deeper blue for accessibility */
-  --hover-col: {{ site.hover-col | default: "#003366" }}; /* even deeper blue for hover */
-  --navbar-col: {{ site.navbar-col | default: "#F8F9FA" }}; /* lighter for contrast */
-  --navbar-text-col: {{ site.navbar-text-col | default: "#222222" }}; /* darker for contrast */
+  --text-col: {{ site.text-col | default: "#222222" }};
+  --link-col: {{ site.link-col | default: "#0056B3" }};
+  --hover-col: {{ site.hover-col | default: "#003366" }};
+  --navbar-col: {{ site.navbar-col | default: "#F8F9FA" }};
+  --navbar-text-col: {{ site.navbar-text-col | default: "#222222" }};
   --navbar-border-col: {{ site.navbar-border-col | default: "#B0B0B0" }};
-  --footer-col: {{ site.footer-col | default: "#222222" }}; /* dark footer for contrast */
-  --footer-text-col: {{ site.footer-text-col | default: "#FFFFFF" }}; /* white text on dark footer */
-  --footer-link-col: {{ site.footer-link-col | default: "#FFD700" }}; /* gold for high contrast */
-  --footer-hover-col: {{ site.footer-hover-col | default: "#FFA500" }}; /* orange for hover */
+  --footer-col: {{ site.footer-col | default: "#222222" }};
+  --footer-text-col: {{ site.footer-text-col | default: "#FFFFFF" }};
+  --footer-link-col: {{ site.footer-link-col | default: "#FFD700" }};
+  --footer-hover-col: {{ site.footer-hover-col | default: "#FFA500" }};
 
   /* common CSS variables */
   --body-font: 'Lora', 'Times New Roman', serif;
   --header-font: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --mid-col: #555555;
+}
+
+/* Dark mode variables */
+body.dark-mode {
+  --page-col: #181A1B;
+  --text-col: #F3F3F3;
+  --link-col: #7AB8FF;
+  --hover-col: #FFD700;
+  --navbar-col: #23272A;
+  --navbar-text-col: #F3F3F3;
+  --navbar-border-col: #333;
+  --footer-col: #23272A;
+  --footer-text-col: #F3F3F3;
+  --footer-link-col: #FFD700;
+  --footer-hover-col: #FFA500;
+  --mid-col: #B0B0B0;
 }
 
 /* --- General --- */

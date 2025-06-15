@@ -57,6 +57,28 @@
     </div>
   {% endif %}
 
+<button id="darkModeToggle" class="btn btn-sm" style="margin-left:1rem; background:var(--navbar-col,#F8F9FA); color:var(--navbar-text-col,#222); border-radius:1.2rem; border:none; font-weight:700; padding:0.4rem 1.2rem; cursor:pointer; transition:background 0.2s;">🌙 Dark Mode</button>
 </nav>
+
+<script>
+(function() {
+  function setDarkMode(on) {
+    if(on) {
+      document.body.classList.add('dark-mode');
+      localStorage.setItem('darkMode', 'on');
+      document.getElementById('darkModeToggle').innerText = '☀️ Light Mode';
+    } else {
+      document.body.classList.remove('dark-mode');
+      localStorage.setItem('darkMode', 'off');
+      document.getElementById('darkModeToggle').innerText = '🌙 Dark Mode';
+    }
+  }
+  var darkMode = localStorage.getItem('darkMode');
+  setDarkMode(darkMode === 'on');
+  document.getElementById('darkModeToggle').onclick = function() {
+    setDarkMode(!document.body.classList.contains('dark-mode'));
+  };
+})();
+</script>
 
 {% include search.html %}
