@@ -25,10 +25,8 @@ navbar-links:
   Index: "tags"
   Free Books: "books"
   External:
-    
-   
-    - Portfolio: "https://rafayethossain.github.io/portfolio//"
-    - Word Counting Tool: "https://rafayethossain.github.io/word-counting-tool-ChatGPT/"
+     - Portfolio: "https://rafayethossain.github.io/portfolio//"
+     - Word Counting Tool: "https://rafayethossain.github.io/word-counting-tool-ChatGPT/"
     # Search: "search"
   
 ################
