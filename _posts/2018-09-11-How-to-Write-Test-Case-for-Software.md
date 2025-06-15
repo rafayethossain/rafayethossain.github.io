@@ -3,6 +3,7 @@ layout: post
 title: How to Write Test Case for Software 
 subtitle: A Comprehensive Guide for Writing Effective Test Case for Your Software Project
 tags: [sqa, software testing]
+categories: []
 image: /assets/img/diary.png
 thumbnail-img: /assets/img/diary.png
 bigimg: /assets/img/cover.jpg

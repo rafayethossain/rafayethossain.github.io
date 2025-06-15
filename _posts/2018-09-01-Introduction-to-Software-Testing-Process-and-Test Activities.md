@@ -1,8 +1,10 @@
 ---
 layout: post
 title: Introduction to Software Testing Process and Test Activities
-subtitle: An Introduction to Test Activities
+date: 2018-09-01
 tags: [sqa, software testing]
+categories: [software testing, process]
+subtitle: An Introduction to Test Activities
 image: /assets/img/diary.png
 bigimg: /assets/img/cover.jpg
 thumbnail-img: /assets/img/diary.png
