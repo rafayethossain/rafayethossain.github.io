@@ -65,12 +65,23 @@
   <h2>Related Posts</h2>
   <div class="related-posts-list">
     {%- assign related = site.posts | where_exp: "post", "post.url != page.url" -%}
-    {%- assign related = related | where_exp: "post", "post.tags | concat: page.tags | uniq | size < post.tags | size + page.tags | size" -%}
-    {%- if related.size < 3 -%}
-      {%- assign related = site.posts | where_exp: "post", "post.url != page.url and post.categories | concat: page.categories | uniq | size < post.categories | size + page.categories | size" -%}
-    {%- endif -%}
-    {%- assign related = related | slice: 0, 5 -%}
+    {%- assign related_by_tag = "" | split: "" -%}
     {%- for post in related -%}
+      {%- assign intersect = post.tags | array_intersect: page.tags -%}
+      {%- if intersect.size > 0 -%}
+        {%- assign related_by_tag = related_by_tag | push: post -%}
+      {%- endif -%}
+    {%- endfor -%}
+    {%- assign related_by_cat = "" | split: "" -%}
+    {%- for post in related -%}
+      {%- assign intersect = post.categories | array_intersect: page.categories -%}
+      {%- if intersect.size > 0 -%}
+        {%- assign related_by_cat = related_by_cat | push: post -%}
+      {%- endif -%}
+    {%- endfor -%}
+    {%- assign related_combined = related_by_tag | concat: related_by_cat | uniq -%}
+    {%- assign related_final = related_combined | slice: 0, 5 -%}
+    {%- for post in related_final -%}
       <div class="related-post-card">
         <a href="{{ post.url | relative_url }}">{{ post.title | strip_html }}</a>
         <div class="date">{{ post.date | date: "%b %d, %Y" }}</div>
@@ -79,7 +90,7 @@
         {%- endif -%}
       </div>
     {%- endfor -%}
-    {%- if related.size == 0 -%}
+    {%- if related_final.size == 0 -%}
       <div style="color:#888; text-align:center; width:100%;">No related posts found.</div>
     {%- endif -%}
   </div>
