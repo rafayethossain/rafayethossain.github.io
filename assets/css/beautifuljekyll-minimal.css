@@ -11,3 +11,13 @@ footer.footer-min {
   border-top: 1px solid #eeeeee;
   text-align: center;
 }
+
+body.dark-mode, .dark-mode body {
+  background-color: #181A1B !important;
+  color: #F3F3F3 !important;
+}
+footer.footer-min.dark-mode, .dark-mode footer.footer-min {
+  background-color: #23272A !important;
+  color: #F3F3F3 !important;
+  border-top: 1px solid #333 !important;
+}
