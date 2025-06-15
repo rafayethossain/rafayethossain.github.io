@@ -24,8 +24,6 @@ _Quick Link to Specific Topic:_
 - [Build Your Business Analysis Toolkit](#build-your-business-analysis-toolkit)
 - [Gain Practical Experience](#gain-practical-experience)
 - [Network and Connect with Other Professionals](#network-and-connect-with-other-professionals)
-- [About Content Creator:](#about-content-creator)
-- [All Posts on Business Analysis:](#all-posts-on-business-analysis)
 
 
 
@@ -63,58 +61,7 @@ Buy me a coffee if you enjoyed this post. Your support helps me create more valu
 
 
 
-
-
-----------------------------------------------------------------------
-----------------------------------------------------------------------
-
-# About Content Creator: 
-
-
-Hi, This is **Rafayet Hossain**
-
-A Seasoned Business Systems Analyst, Project Manager, and SQA Engineer with experience in driving digital changes within organizations. I specialize in understanding business needs and developing software solutions to improve processes and drive growth. I am skilled in managing projects, analyzing data, and ensuring quality in the final product. I am passionate about using my expertise to help organizations reach their goals and succeed. Let's work together to improve your business and drive success. Contact me for any inquiries or projects.
-
- 
-
-
-👉 For Any Query or Assignment Contact: : 
-
-
-[![Linkedin](https://img.shields.io/badge/-LinkedIn-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/rafayethossain/)
-[![Gmail](https://img.shields.io/badge/-Gmail-c14438?style=flat&logo=Gmail&logoColor=white)](mailto:rafayet13@gmail.com)
-
-
-----------------------------------------------------------------------
-----------------------------------------------------------------------
-
-
-
- 
-# All Posts on Business Analysis:  
-
-Click on any of the desired links to directly access the information.
-
-- [x]  [**How to Make a Successful Career Transition From Software Testing to Business Analysis**](https://rafayethossain.github.io/2019-01-15-How-to-Tranisition-to-Business-Analysis-from-Software-Testing/
-)
-- [x]  [**An Introduction to Business Analysis and the Business Analyst**](https://rafayethossain.github.io/2019-01-22-Introduction-to-Business-Analysis/)
-- [x]  [**Project Initiation Activities as a Business Analyst**](https://rafayethossain.github.io/2019-02-07-Project-Initiation-Business-Analysis-Activities/)
-- [x]  [**Project Inititation Activities**](https://rafayethossain.github.io/2019-02-25-How-to-Prepare-Business-Case-Business-Analyst/)
-- [x]  [**How to Prepare a Business Case for Project**](https://rafayethossain.github.io/2019-02-25-How-to-Prepare-Business-Case-Business-Analyst/)
-- [x]  [**How to Manage Your Project Stakeholder Using RACI Matrix**](https://rafayethossain.github.io/2019-02-27-Stakeholder-Management-Business-Analyst/)  
-- [x]  [**Everything You Need to Kow About Software Requirements**](https://rafayethossain.github.io/2019-03-03-What-is-Software-Requirements/)
-- [x]  [**Requirements Elicitation Techniques You Must Learn**](https://rafayethossain.github.io/2019-03-30-Requirement-Elicitation-Complete-Guidelines/)
-- [x]  [**How a Pro BA Analyze Software Requirements**](https://rafayethossain.github.io/2019-04-04-Requirement-Analysis-Guidelines/)
-- [x]  [**BPMN Basics for Business Analyst**](https://rafayethossain.github.io/2019-04-20-BPMN-Basic-Guidelines-with-Example/)
-- [x]  [**Requirements Specification Techniques**](https://rafayethossain.github.io/2019-05-01-Requirement-Specification-Techniques/)
-- [x]  [**Preparing a Software Requirement Specification (SRS) Document That Works**](https://rafayethossain.github.io/2019-05-07-How-to-Write-SRS-Document/)
-- [x]  [**Software Requirements Approval to Kick off Development**](https://rafayethossain.github.io/2019-06-06-Requirement-Approval-Process/)
-- [x]  [**Change Control Process in SDLC**](https://rafayethossain.github.io/2019-07-07-Change-Control-Process-in-SDLC/)
-- [x]  [**Agile Project Managment with Srum Roles and Responsibilites**](https://rafayethossain.github.io/2022-10-10-Agile-Scrum-in-a-Nutshell/)
-
-
-
-
+{% include blog-footer.html %}
 {: .box-success}
 Enjoy !!!
 **See Yaaa, Next.**

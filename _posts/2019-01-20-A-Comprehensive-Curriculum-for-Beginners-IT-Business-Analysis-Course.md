@@ -401,21 +401,7 @@ _Please note that this is an extended outline based on the given course. You may
 **Prerequisites:**
 There are no specific prerequisites for this course. However, basic knowledge of business processes and familiarity with software applications is beneficial.
 
-
-# About Content Creator:
-
-Hi, This is **Rafayet Hossain**
-
-A Seasoned Business Systems Analyst, Project Manager, and SQA Engineer with experience in driving digital changes within organizations. I specialize in understanding business needs and developing software solutions to improve processes and drive growth. I am skilled in managing projects, analyzing data, and ensuring quality in the final product. I am passionate about using my expertise to help organizations reach their goals and succeed. Let's work together to improve your business and drive success.
-
-So, if you're ready to take your career to the next level, don't wait - contact me today to learn more about my course and how it can help you achieve your goals!
-
-👉 Contact Information :
-
-[![Linkedin](https://img.shields.io/badge/-LinkedIn-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/rafayethossain/)
-[![Gmail](https://img.shields.io/badge/-Gmail-c14438?style=flat&logo=Gmail&logoColor=white)](mailto:rafayet13@gmail.com)
-
----
+{% include blog-footer.html %}
 
 ---
 
