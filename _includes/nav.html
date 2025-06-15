@@ -18,9 +18,9 @@
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="menuitem" aria-haspopup="true" aria-expanded="false" tabindex="0" onclick="event.preventDefault();">{{ link[0] }}</a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" role="menu">
               {%- for childlink in link[1] -%}
-                {%- for linkparts in childlink %}
-                  <a class="dropdown-item" href="{{ linkparts[1] | relative_url }}" role="menuitem" tabindex="0">{{ linkparts[0] }}</a>
-                {%- endfor -%}
+              {%- assign label = childlink | first | first -%}
+              {%- assign url = childlink | first | last -%}
+              <a class="dropdown-item" href="{{ url }}" role="menuitem" tabindex="0">{{ label }}</a>
               {%- endfor %}
             </div>
           </li>
