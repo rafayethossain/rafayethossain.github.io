@@ -3,34 +3,140 @@ layout: page
 title: 'Tag Index'
 ---
 
-{% assign date_format = site.date_format | default: "%B %-d, %Y" %}
+<style>
+.tags-modern {
+  max-width: 950px;
+  margin: 2.5rem auto 2rem auto;
+  background: var(--page-col, #fff);
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.07);
+  padding: 2.5rem 2rem 2rem 2rem;
+  font-family: var(--body-font, 'Lora', 'Times New Roman', serif);
+}
+.tags-modern h1 {
+  font-family: var(--header-font, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif);
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--link-col, #0056B3);
+  text-align: center;
+  margin-bottom: 2.2rem;
+}
+.tags-modern .tag-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+.tags-modern .tag-btn {
+  display: inline-block;
+  background: var(--navbar-col, #F8F9FA);
+  color: var(--link-col, #0056B3);
+  border-radius: 1.2rem;
+  padding: 0.5rem 1.3rem;
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-decoration: none;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+  transition: background 0.2s, color 0.2s;
+  border: none;
+}
+.tags-modern .tag-btn:hover {
+  background: var(--hover-col, #003366);
+  color: #fff;
+}
+.tags-modern .tag-section {
+  margin-bottom: 2.5rem;
+}
+.tags-modern h2 {
+  font-size: 1.3rem;
+  color: var(--link-col, #0056B3);
+  margin-top: 2.2rem;
+  margin-bottom: 1.1rem;
+  font-family: var(--header-font, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif);
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.tags-modern h2 .fa-tag {
+  color: var(--hover-col, #003366);
+  font-size: 1.1em;
+}
+.tags-modern .post-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.1rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.tags-modern .tag-entry {
+  background: #f8f8f8;
+  border-radius: 0.7rem;
+  padding: 1rem 1.1rem 0.7rem 1.1rem;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.03);
+  margin-bottom: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 70px;
+}
+.tags-modern .tag-entry a {
+  color: var(--link-col, #0056B3);
+  font-weight: 700;
+  font-size: 1.08rem;
+  text-decoration: none;
+  margin-bottom: 0.3rem;
+  transition: color 0.2s;
+}
+.tags-modern .tag-entry a:hover {
+  color: var(--hover-col, #003366);
+}
+.tags-modern .entry-date {
+  color: var(--mid-col, #555555);
+  font-size: 0.98em;
+  margin-top: 0.1rem;
+}
+@media (max-width: 600px) {
+  .tags-modern { padding: 1.2rem 0.5rem; }
+  .tags-modern h1 { font-size: 1.3rem; }
+  .tags-modern h2 { font-size: 1.05rem; }
+  .tags-modern .post-list { grid-template-columns: 1fr; }
+}
+</style>
 
-{%- capture site_tags -%}
-    {%- for tag in site.tags -%}
-        {{- tag | first -}}{%- unless forloop.last -%},{%- endunless -%}
+<div class="tags-modern">
+  <h1>Tag Index</h1>
+  {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
+  {%- capture site_tags -%}
+      {%- for tag in site.tags -%}
+          {{- tag | first -}}{%- unless forloop.last -%},{%- endunless -%}
+      {%- endfor -%}
+  {%- endcapture -%}
+  {%- assign tags_list = site_tags | split:',' | sort -%}
+
+  <div class="tag-nav">
+    {%- for tag in tags_list -%}
+      <a href="#{{- tag -}}" class="tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;{{- tag -}}&nbsp;({{site.tags[tag].size}})</a>
     {%- endfor -%}
-{%- endcapture -%}
-{%- assign tags_list = site_tags | split:',' | sort -%}
+  </div>
 
-{%- for tag in tags_list -%}
-    <a href="#{{- tag -}}" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;{{- tag -}}&nbsp;({{site.tags[tag].size}})</a>
-{%- endfor -%}
-
-<div id="full-tags-list">
-{%- for tag in tags_list -%}
-    <h2 id="{{- tag -}}" class="linked-section">
-        <i class="fas fa-tag" aria-hidden="true"></i>
-        &nbsp;{{- tag -}}&nbsp;({{site.tags[tag].size}})
-    </h2>
-    <div class="post-list">
-        {%- for post in site.tags[tag] -%}
+  <div id="full-tags-list">
+    {%- for tag in tags_list -%}
+      <div class="tag-section">
+        <h2 id="{{- tag -}}" class="linked-section">
+          <i class="fas fa-tag" aria-hidden="true"></i>
+          {{- tag -}}&nbsp;({{site.tags[tag].size}})
+        </h2>
+        <div class="post-list">
+          {%- for post in site.tags[tag] -%}
             <div class="tag-entry">
-                <a href="{{ post.url | relative_url }}">{{- post.title | strip_html -}}</a>
-                <div class="entry-date">
-                    <time datetime="{{- post.date | date_to_xmlschema -}}">{{- post.date | date: date_format -}}</time>
-                </div>
+              <a href="{{ post.url | relative_url }}">{{- post.title | strip_html -}}</a>
+              <div class="entry-date">
+                <time datetime="{{- post.date | date_to_xmlschema -}}">{{- post.date | date: date_format -}}</time>
+              </div>
             </div>
-        {%- endfor -%}
-    </div>
-{%- endfor -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
 </div>
