@@ -1,7 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Only proceed if we're on a blog post page (check if there's a blog-post element)
-    const blogPost = document.querySelector('.blog-post');
-    
     // Create and append Back to Top button
     const backToTopBtn = document.createElement('button');
     backToTopBtn.id = 'back-to-top';
@@ -9,35 +6,62 @@ document.addEventListener('DOMContentLoaded', () => {
     backToTopBtn.innerHTML = '<i class="fas fa-arrow-up" aria-hidden="true"></i>';
     document.body.appendChild(backToTopBtn);
 
-    // Create and append progress bar only on blog post pages
-    if (blogPost) {
-        const progressBar = document.createElement('div');
-        progressBar.id = 'reading-progress';
-        document.body.insertBefore(progressBar, document.body.firstChild);
-    }
+    // Create progress bar wrapper and bar
+    const progressWrapper = document.createElement('div');
+    progressWrapper.className = 'progress-wrapper';
+    
+    const progressBar = document.createElement('div');
+    progressBar.id = 'reading-progress';
+    progressWrapper.appendChild(progressBar);
+    
+    // Insert progress bar at the top of the page
+    document.body.insertBefore(progressWrapper, document.body.firstChild);
 
-    // Show/hide back to top button and update progress bar
-    window.addEventListener('scroll', () => {
-        // Back to top button visibility
-        if (window.scrollY > 300) {
+    // Function to calculate reading progress
+    function updateReadingProgress() {
+        const docElement = document.documentElement;
+        const bodyElement = document.body;
+        const windowHeight = window.innerHeight;
+        
+        // Total scrollable distance
+        const totalHeight = Math.max(
+            bodyElement.scrollHeight,
+            bodyElement.offsetHeight,
+            docElement.clientHeight,
+            docElement.scrollHeight,
+            docElement.offsetHeight
+        ) - windowHeight;
+        
+        // How far we've scrolled
+        const scrolled = window.scrollY;
+        
+        // Calculate percentage
+        const progressPercent = (scrolled / totalHeight) * 100;
+        
+        // Update progress bar width
+        progressBar.style.width = `${Math.min(progressPercent, 100)}%`;
+        
+        // Update back to top button visibility
+        if (scrolled > 300) {
             backToTopBtn.classList.add('show');
         } else {
             backToTopBtn.classList.remove('show');
         }
-        
-        // Update reading progress only on blog post pages
-        if (blogPost) {
-            const rect = blogPost.getBoundingClientRect();
-            const progressBar = document.getElementById('reading-progress');
-            
-            // Calculate progress only when the blog post is in view
-            if (rect.top < window.innerHeight && rect.bottom > 0) {
-                const totalHeight = blogPost.clientHeight;
-                const currentProgress = Math.abs(rect.top) / (totalHeight - window.innerHeight) * 100;
-                const bounded = Math.min(100, Math.max(0, currentProgress));
-                progressBar.style.width = `${bounded}%`;
-            }
-        }
+    }    // Listen for scroll events
+    window.addEventListener('scroll', updateReadingProgress);
+    window.addEventListener('resize', updateReadingProgress);
+
+    // Smooth scroll to top when button is clicked
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // Initial progress update
+    updateReadingProgress();
+});
     });
 
     // Smooth scroll to top when button is clicked

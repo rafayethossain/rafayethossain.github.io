@@ -1,16 +1,15 @@
-{% assign words = page.content | strip_html | number_of_words %}
-
-{% if words < 180 %}
-  {% assign readtime = "1 min" %}
-{% else %}
-  {% assign readtime = words | divided_by:180 | round %}
-  {% assign readtime = readtime | append: " min" %}
-{% endif %}
-
-<span class="post-meta reading-time" title="{{ words }} words">
-  <i class="far fa-clock" aria-hidden="true"></i>
-  {{ readtime }} read
-</span>me on GitHub Jekyll" (c) 2020 Ruby Griffith Ramirez, MIT License -->
+<!--- "ReadTime on GitHub Jekyll" (c) 2020 Ruby Griffith Ramirez, MIT License -->
+{% assign ReadTime = page.content | strip_html | number_of_words %}
+{% assign calcReadTime = ReadTime | float %}
+{% assign finalReadTime = calcReadTime | divided_by:200 | round: 2 %}
+{% assign number = finalReadTime | round %}
+{% if number >= 1 %}
+  {% assign yesReadTime = number | append: " minute read" %}
+  <span class="post-meta"><span class="d-none d-md-inline middot">&middot;</span> {{ yesReadTime }}</span>
+{% elsif number < 1 %}
+  {% assign minReadTime = "Less than 1 minute read" %}
+  <span class="post-meta"><span class="d-none d-md-inline middot">&middot;</span> {{ minReadTime }}</span>
+{% endif %}me on GitHub Jekyll" (c) 2020 Ruby Griffith Ramirez, MIT License -->
 
 {% assign ReadTime = page.content | strip_html | number_of_words %}
 {% assign calcReadTime = ReadTime | float %}
