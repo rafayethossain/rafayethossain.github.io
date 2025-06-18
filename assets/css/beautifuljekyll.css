@@ -1523,3 +1523,31 @@ body.dark-mode textarea:focus {
   border-color: var(--link-col);
   box-shadow: 0 0 5px rgba(0,86,179,0.2);
 }
+
+/* Reading time styles */
+.reading-time {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 1rem;
+  font-size: 0.95rem;
+  color: var(--mid-col);
+}
+
+.reading-time i {
+  margin-right: 0.4rem;
+  font-size: 0.9rem;
+}
+
+/* Dark mode reading time */
+body.dark-mode .reading-time {
+  color: var(--navbar-text-col);
+}
+
+/* Responsive reading time */
+@media (max-width: 767px) {
+  .reading-time {
+    display: block;
+    margin-left: 0;
+    margin-top: 0.3rem;
+  }
+}
