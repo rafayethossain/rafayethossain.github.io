@@ -1178,3 +1178,95 @@ pre {
   clip: rect(0,0,0,0);
   border: 0;
 }
+
+/* Dark mode specific styles */
+body.dark-mode {
+  background-color: var(--page-col);
+  color: var(--text-col);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .navbar {
+  background-color: var(--navbar-col);
+  border-bottom: 1px solid var(--navbar-border-col);
+}
+
+body.dark-mode .navbar-custom .navbar-brand,
+body.dark-mode .navbar-custom .nav-link {
+  color: var(--navbar-text-col);
+}
+
+body.dark-mode .blog-post {
+  background-color: var(--page-col);
+}
+
+body.dark-mode pre {
+  background-color: #2d2d2d;
+  border: 1px solid var(--navbar-border-col);
+}
+
+body.dark-mode code {
+  background-color: #2d2d2d;
+  color: #f8f8f2;
+}
+
+body.dark-mode blockquote {
+  border-left: 5px solid var(--link-col);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode table {
+  border: 1px solid var(--navbar-border-col);
+}
+
+body.dark-mode th,
+body.dark-mode td {
+  border: 1px solid var(--navbar-border-col);
+}
+
+body.dark-mode th {
+  background-color: var(--navbar-col);
+}
+
+/* Theme toggle button styles */
+#theme-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+#theme-toggle i {
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+
+/* Smooth transition for theme changes */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode link styles */
+body.dark-mode a {
+  color: var(--link-col);
+}
+
+body.dark-mode a:hover {
+  color: var(--hover-col);
+  text-decoration: none;
+}
+
+/* Dark mode footer styles */
+body.dark-mode footer {
+  background-color: var(--footer-col);
+  color: var(--footer-text-col);
+}
+
+body.dark-mode footer a {
+  color: var(--footer-link-col);
+}
+
+body.dark-mode footer a:hover {
+  color: var(--footer-hover-col);
+}
