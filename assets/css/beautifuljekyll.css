@@ -881,6 +881,21 @@ table tr td :last-child {
   margin-bottom: 0;
 }
 
+/* Dark mode table styles */
+body.dark-mode table tr {
+  background-color: var(--page-col);
+  border-top: 1px solid #444;
+}
+
+body.dark-mode table tr:nth-child(2n) {
+  background-color: #1a1a1a;
+}
+
+body.dark-mode table tr th,
+body.dark-mode table tr td {
+  border: 1px solid #444;
+}
+
 /* --- Code blocks --- */
 
 code {
@@ -992,7 +1007,40 @@ pre {
   border-left-color: #3CB371;
 }
 
-/* --- Misc blog post styles --- */
+/* Dark mode notification boxes */
+body.dark-mode .box-note,
+body.dark-mode .box-warning,
+body.dark-mode .box-error,
+body.dark-mode .box-success {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+}
+
+body.dark-mode .box-note {
+  border-left-color: #3498db;
+}
+
+body.dark-mode .box-warning {
+  border-left-color: #f1c40f;
+  background-color: rgba(241, 196, 15, 0.1);
+}
+
+body.dark-mode .box-error {
+  border-left-color: #e74c3c;
+  background-color: rgba(231, 76, 60, 0.1);
+}
+
+body.dark-mode .box-success {
+  border-left-color: #2ecc71;
+  background-color: rgba(46, 204, 113, 0.1);
+}
+
+/* Dark mode blockquotes */
+body.dark-mode blockquote {
+  border-left: 0.3125rem solid #666;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #ccc;
+}
 
 .blog-post :first-child {
   margin-top: 0;
@@ -1105,6 +1153,45 @@ pre {
 
 #nav-search-input::placeholder {
   color: #777;
+}
+
+/* Dark mode styles for search */
+body.dark-mode #beautifuljekyll-search-overlay {
+  background: rgba(0,0,0,0.95);
+}
+
+body.dark-mode #nav-search-input {
+  background: #2d2d2d;
+  color: var(--text-col);
+}
+
+body.dark-mode #nav-search-input:focus {
+  background: #363636;
+  box-shadow: 0px 0.15rem 1rem rgba(0,0,0,0.3);
+}
+
+body.dark-mode #nav-search-input::placeholder {
+  color: #999;
+}
+
+body.dark-mode #nav-search-exit {
+  color: #999;
+}
+
+body.dark-mode #nav-search-exit:hover {
+  color: var(--text-col);
+}
+
+body.dark-mode #search-results-container {
+  color: var(--text-col);
+}
+
+body.dark-mode #search-results-container a {
+  color: var(--link-col);
+}
+
+body.dark-mode #search-results-container a:hover {
+  color: var(--hover-col);
 }
 
 #search-results-container {
@@ -1233,7 +1320,7 @@ body.dark-mode th {
   background: none;
   border: none;
   padding: 0;
-  cursor: pointer;
+  cursor: none;
   outline: none;
 }
 
@@ -1269,4 +1356,170 @@ body.dark-mode footer a {
 
 body.dark-mode footer a:hover {
   color: var(--footer-hover-col);
+}
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: var(--link-col);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+#back-to-top.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#back-to-top:hover {
+    background-color: var(--hover-col);
+}
+
+/* For dark mode */
+body.dark-mode #back-to-top {
+    background-color: var(--footer-link-col);
+    color: var(--navbar-col);
+}
+
+body.dark-mode #back-to-top:hover {
+    background-color: var(--footer-hover-col);
+}
+
+/* Reading Progress Bar */
+#reading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: var(--link-col);
+    z-index: 9999;
+    transition: width 0.1s ease;
+}
+
+/* For dark mode */
+body.dark-mode #reading-progress {
+    background: var(--footer-link-col);
+}
+
+/* Ensure the progress bar appears below fixed header */
+.navbar-custom {
+    z-index: 10000;
+}
+
+/* Add focus styles for accessibility */
+#back-to-top:focus {
+    outline: 2px solid var(--link-col);
+    outline-offset: 2px;
+}
+
+body.dark-mode #back-to-top:focus {
+    outline-color: var(--footer-link-col);
+}
+
+/* Dark mode styles for code */
+body.dark-mode code {
+  background-color: #2d2d2d;
+  color: #f8f8f2;
+}
+
+body.dark-mode pre {
+  background: #1a1a1a;
+  border: 1px solid #333;
+}
+
+body.dark-mode .highlight > pre {
+  background-image: linear-gradient(
+    rgba(255,255,255,0.05), rgba(255,255,255,0.05) 1.5em,
+    rgba(255,255,255,0.03) 1.5em, rgba(255,255,255,0.03) 3em
+  );
+  border: 1px solid #333;
+  border-left: 0.4375rem solid #666;
+}
+
+body.dark-mode .highlight pre.lineno {
+  color: #666;
+  border-right: 2px solid #666;
+}
+
+/* Dark mode syntax highlighting */
+body.dark-mode .highlight {
+  background: #1a1a1a;
+}
+
+body.dark-mode .highlight .c { color: #75715e } /* Comment */
+body.dark-mode .highlight .err { color: #f8f8f2 } /* Error */
+body.dark-mode .highlight .k { color: #66d9ef } /* Keyword */
+body.dark-mode .highlight .l { color: #ae81ff } /* Literal */
+body.dark-mode .highlight .n { color: #f8f8f2 } /* Name */
+body.dark-mode .highlight .o { color: #f92672 } /* Operator */
+body.dark-mode .highlight .p { color: #f8f8f2 } /* Punctuation */
+body.dark-mode .highlight .s { color: #a6e22e } /* String */
+
+/* Dark mode related posts */
+body.dark-mode .related-posts-section {
+  background: var(--navbar-col);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .related-post-card {
+  background: var(--page-col);
+  border: 1px solid #333;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.2);
+}
+
+/* Dark mode blog footer */
+body.dark-mode .blog-footer-panel {
+  background: var(--navbar-col);
+  box-shadow: 0 6px 32px rgba(0,0,0,0.2);
+}
+
+body.dark-mode .blog-footer-divider {
+  background: linear-gradient(
+    90deg,
+    #333 0%,
+    var(--link-col) 50%,
+    #333 100%
+  );
+}
+
+/* Dark mode comments section */
+body.dark-mode .staticman-comments .page__comments-title {
+  border-top: 1px solid #333;
+}
+
+body.dark-mode .comment {
+  background-color: var(--navbar-col);
+  border: 1px solid #333;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.2);
+}
+
+/* Dark mode forms */
+body.dark-mode input[type="text"],
+body.dark-mode input[type="email"],
+body.dark-mode input[type="url"],
+body.dark-mode textarea {
+  background-color: var(--page-col);
+  border: 1px solid #444;
+  color: var(--text-col);
+}
+
+body.dark-mode input[type="text"]:focus,
+body.dark-mode input[type="email"]:focus,
+body.dark-mode input[type="url"]:focus,
+body.dark-mode textarea:focus {
+  border-color: var(--link-col);
+  box-shadow: 0 0 5px rgba(0,86,179,0.2);
 }
