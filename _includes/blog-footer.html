@@ -1,0 +1,41 @@
+<style>
+  .blog-footer-panel {
+    max-width: 800px;
+    margin: 3rem auto 2rem auto;
+    background: var(--page-col, #fff);
+    border-radius: 1.5rem;
+    box-shadow: 0 6px 32px rgba(0, 0, 0, 0.09);
+    padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+    font-family: var(--body-font, "Lora", "Times New Roman", serif);
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+    align-items: stretch;
+  }
+  .blog-footer-divider {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      #eee 0%,
+      var(--hover-col, #003366) 50%,
+      #eee 100%
+    );
+    border: none;
+    margin: 0.5rem 0 0.5rem 0;
+    opacity: 0.5;
+  }
+  @media (max-width: 600px) {
+    .blog-footer-panel {
+      padding: 1.2rem 0.5rem;
+      gap: 1.2rem;
+    }
+  }
+</style>
+
+<div class="blog-footer-panel">
+  {% include buymeacoffee.html %}
+  <hr class="blog-footer-divider" />
+  {% include related-posts.html %}
+  <hr class="blog-footer-divider" />
+  {% include about-creator.html %}
+</div>

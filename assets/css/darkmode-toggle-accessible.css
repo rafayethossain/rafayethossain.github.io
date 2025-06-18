@@ -1,0 +1,30 @@
+/* Accessibility and hover/focus improvements for dark mode toggle button */
+#darkModeToggle {
+  outline: none;
+  box-shadow: none;
+  position: relative;
+}
+#darkModeToggle:focus-visible {
+  outline: 3px solid var(--link-col, #0056B3);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(0,86,179,0.2);
+}
+#darkModeToggle:hover, #darkModeToggle:active {
+  background: var(--hover-col, #003366);
+  color: var(--footer-link-col, #FFD700);
+  transition: background 0.2s, color 0.2s;
+}
+#darkModeToggle[aria-pressed="true"] {
+  background: var(--navbar-border-col, #B0B0B0);
+  color: var(--footer-hover-col, #FFA500);
+}
+#darkModeToggle .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}

@@ -1,0 +1,97 @@
+<style>
+.related-posts-section {
+  max-width: 700px;
+  margin: 2.5rem auto 2rem auto;
+  background: var(--page-col, #fff);
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  font-family: var(--body-font, 'Lora', 'Times New Roman', serif);
+}
+.related-posts-section h2 {
+  font-family: var(--header-font, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--link-col, #0056B3);
+  margin-bottom: 1.1rem;
+  text-align: center;
+}
+.related-posts-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+}
+.related-post-card {
+  background: #f8f8f8;
+  border-radius: 0.7rem;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.03);
+  padding: 1rem 1.1rem 0.7rem 1.1rem;
+  min-width: 180px;
+  max-width: 220px;
+  flex: 1 1 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.related-post-card a {
+  color: var(--link-col, #0056B3);
+  font-weight: 700;
+  font-size: 1.08rem;
+  text-decoration: none;
+  margin-bottom: 0.3rem;
+  transition: color 0.2s;
+}
+.related-post-card a:hover {
+  color: var(--hover-col, #003366);
+}
+.related-post-card .date {
+  color: var(--mid-col, #555555);
+  font-size: 0.98em;
+  margin-bottom: 0.2rem;
+}
+.related-post-card .desc {
+  color: #888;
+  font-size: 0.97em;
+  margin-top: 0.2rem;
+}
+@media (max-width: 600px) {
+  .related-posts-section { padding: 1.2rem 0.5rem; }
+  .related-posts-list { flex-direction: column; gap: 0.7rem; }
+}
+</style>
+
+<div class="related-posts-section">
+  <h2>Related Posts</h2>
+  <div class="related-posts-list">
+    {%- assign related = site.posts | where_exp: "post", "post.url != page.url" -%}
+    {%- assign related_by_tag = "" | split: "" -%}
+    {%- for post in related -%}
+      {%- assign intersect = post.tags | array_intersect: page.tags -%}
+      {%- if intersect.size > 0 -%}
+        {%- assign related_by_tag = related_by_tag | push: post -%}
+      {%- endif -%}
+    {%- endfor -%}
+    {%- assign related_by_cat = "" | split: "" -%}
+    {%- for post in related -%}
+      {%- assign intersect = post.categories | array_intersect: page.categories -%}
+      {%- if intersect.size > 0 -%}
+        {%- assign related_by_cat = related_by_cat | push: post -%}
+      {%- endif -%}
+    {%- endfor -%}
+    {%- assign related_combined = related_by_tag | concat: related_by_cat | uniq -%}
+    {%- assign related_final = related_combined | slice: 0, 5 -%}
+    {%- for post in related_final -%}
+      <div class="related-post-card">
+        <a href="{{ post.url | relative_url }}">{{ post.title | strip_html }}</a>
+        <div class="date">{{ post.date | date: "%b %d, %Y" }}</div>
+        {%- if post.description -%}
+          <div class="desc">{{ post.description | truncate: 80 }}</div>
+        {%- endif -%}
+      </div>
+    {%- endfor -%}
+    {%- if related_final.size == 0 -%}
+      <div style="color:#888; text-align:center; width:100%;">No related posts found.</div>
+    {%- endif -%}
+  </div>
+</div>
