@@ -1358,206 +1358,56 @@ body.dark-mode footer a:hover {
   color: var(--footer-hover-col);
 }
 
-/* Back to Top Button */
-#back-to-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 99;
-    border: none;
-    outline: none;
-    background-color: var(--link-col);
-    color: white;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 50%;
-    font-size: 18px;
-    opacity: 0;
-    transform: translateY(100px);
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-#back-to-top.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-#back-to-top:hover {
-    background-color: var(--hover-col);
-}
-
-/* For dark mode */
-body.dark-mode #back-to-top {
-    background-color: var(--footer-link-col);
-    color: var(--navbar-col);
-}
-
-body.dark-mode #back-to-top:hover {
-    background-color: var(--footer-hover-col);
-}
-
 /* Reading Progress Bar */
-.progress-wrapper {
+#reading-progress-bar {
     position: fixed;
-    width: 100%;
-    height: 4px;
-    background: rgba(0,0,0,0.1);
     top: 0;
     left: 0;
-    z-index: 9999;
-}
-
-#reading-progress {
-    height: 100%;
     width: 0;
-    background: var(--link-col);
-    transition: width 0.15s ease-out;
+    height: 4px;
+    background: var(--link-color, #0085A1);
+    z-index: 9999;
+    transition: width 0.2s ease-out;
 }
 
-/* For dark mode */
-body.dark-mode .progress-wrapper {
-    background: rgba(255,255,255,0.1);
+[data-theme="dark"] #reading-progress-bar {
+    background: var(--link-color-dark, #3FB0AC);
 }
 
-body.dark-mode #reading-progress {
-    background: var(--footer-link-col);
+/* Back to Top Button */
+#back-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--background-color, #FFF);
+    color: var(--text-color, #404040);
+    border: 2px solid var(--text-color, #404040);
+    cursor: pointer;
+    display: none;
+    font-size: 20px;
+    line-height: 1;
+    padding: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
 }
 
-/* Ensure the progress bar appears below fixed header */
-.navbar-custom {
-    z-index: 10000;
+#back-to-top-btn:hover {
+    background: var(--link-color, #0085A1);
+    color: var(--background-color, #FFF);
+    border-color: var(--link-color, #0085A1);
 }
 
-/* Add focus styles for accessibility */
-#back-to-top:focus {
-    outline: 2px solid var(--link-col);
-    outline-offset: 2px;
+[data-theme="dark"] #back-to-top-btn {
+    background: var(--background-color-dark, #2C3E50);
+    color: var(--text-color-dark, #E6E6E6);
+    border-color: var(--text-color-dark, #E6E6E6);
 }
 
-body.dark-mode #back-to-top:focus {
-    outline-color: var(--footer-link-col);
-}
-
-/* Dark mode styles for code */
-body.dark-mode code {
-  background-color: #2d2d2d;
-  color: #f8f8f2;
-}
-
-body.dark-mode pre {
-  background: #1a1a1a;
-  border: 1px solid #333;
-}
-
-body.dark-mode .highlight > pre {
-  background-image: linear-gradient(
-    rgba(255,255,255,0.05), rgba(255,255,255,0.05) 1.5em,
-    rgba(255,255,255,0.03) 1.5em, rgba(255,255,255,0.03) 3em
-  );
-  border: 1px solid #333;
-  border-left: 0.4375rem solid #666;
-}
-
-body.dark-mode .highlight pre.lineno {
-  color: #666;
-  border-right: 2px solid #666;
-}
-
-/* Dark mode syntax highlighting */
-body.dark-mode .highlight {
-  background: #1a1a1a;
-}
-
-body.dark-mode .highlight .c { color: #75715e } /* Comment */
-body.dark-mode .highlight .err { color: #f8f8f2 } /* Error */
-body.dark-mode .highlight .k { color: #66d9ef } /* Keyword */
-body.dark-mode .highlight .l { color: #ae81ff } /* Literal */
-body.dark-mode .highlight .n { color: #f8f8f2 } /* Name */
-body.dark-mode .highlight .o { color: #f92672 } /* Operator */
-body.dark-mode .highlight .p { color: #f8f8f2 } /* Punctuation */
-body.dark-mode .highlight .s { color: #a6e22e } /* String */
-
-/* Dark mode related posts */
-body.dark-mode .related-posts-section {
-  background: var(--navbar-col);
-  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
-}
-
-body.dark-mode .related-post-card {
-  background: var(--page-col);
-  border: 1px solid #333;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.2);
-}
-
-/* Dark mode blog footer */
-body.dark-mode .blog-footer-panel {
-  background: var(--navbar-col);
-  box-shadow: 0 6px 32px rgba(0,0,0,0.2);
-}
-
-body.dark-mode .blog-footer-divider {
-  background: linear-gradient(
-    90deg,
-    #333 0%,
-    var(--link-col) 50%,
-    #333 100%
-  );
-}
-
-/* Dark mode comments section */
-body.dark-mode .staticman-comments .page__comments-title {
-  border-top: 1px solid #333;
-}
-
-body.dark-mode .comment {
-  background-color: var(--navbar-col);
-  border: 1px solid #333;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.2);
-}
-
-/* Dark mode forms */
-body.dark-mode input[type="text"],
-body.dark-mode input[type="email"],
-body.dark-mode input[type="url"],
-body.dark-mode textarea {
-  background-color: var(--page-col);
-  border: 1px solid #444;
-  color: var(--text-col);
-}
-
-body.dark-mode input[type="text"]:focus,
-body.dark-mode input[type="email"]:focus,
-body.dark-mode input[type="url"]:focus,
-body.dark-mode textarea:focus {
-  border-color: var(--link-col);
-  box-shadow: 0 0 5px rgba(0,86,179,0.2);
-}
-
-/* Reading time styles */
-.reading-time {
-  display: inline-flex;
-  align-items: center;
-  margin-left: 1rem;
-  font-size: 0.95rem;
-  color: var(--mid-col);
-}
-
-.reading-time i {
-  margin-right: 0.4rem;
-  font-size: 0.9rem;
-}
-
-/* Dark mode reading time */
-body.dark-mode .reading-time {
-  color: var(--navbar-text-col);
-}
-
-/* Responsive reading time */
-@media (max-width: 767px) {
-  .reading-time {
-    display: block;
-    margin-left: 0;
-    margin-top: 0.3rem;
-  }
+[data-theme="dark"] #back-to-top-btn:hover {
+    background: var(--link-color-dark, #3FB0AC);
+    color: var(--background-color-dark, #2C3E50);
+    border-color: var(--link-color-dark, #3FB0AC);
 }

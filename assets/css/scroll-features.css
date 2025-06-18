@@ -1,0 +1,53 @@
+/* Reading Progress Bar */
+#reading-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: var(--link-color, #0085A1);
+    z-index: 9999;
+    transition: width 0.2s ease-out;
+}
+
+[data-theme="dark"] #reading-progress-bar {
+    background: var(--link-color-dark, #3FB0AC);
+}
+
+/* Back to Top Button */
+#back-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--background-color, #FFF);
+    color: var(--text-color, #404040);
+    border: 2px solid var(--text-color, #404040);
+    cursor: pointer;
+    display: none;
+    font-size: 20px;
+    line-height: 1;
+    padding: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+#back-to-top-btn:hover {
+    background: var(--link-color, #0085A1);
+    color: var(--background-color, #FFF);
+    border-color: var(--link-color, #0085A1);
+}
+
+[data-theme="dark"] #back-to-top-btn {
+    background: var(--background-color-dark, #2C3E50);
+    color: var(--text-color-dark, #E6E6E6);
+    border-color: var(--text-color-dark, #E6E6E6);
+}
+
+[data-theme="dark"] #back-to-top-btn:hover {
+    background: var(--link-color-dark, #3FB0AC);
+    color: var(--background-color-dark, #2C3E50);
+    border-color: var(--link-color-dark, #3FB0AC);
+}

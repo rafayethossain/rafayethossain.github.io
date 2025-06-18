@@ -1,84 +1,63 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Create and append Back to Top button
-    const backToTopBtn = document.createElement('button');
-    backToTopBtn.id = 'back-to-top';
-    backToTopBtn.setAttribute('aria-label', 'Back to top');
-    backToTopBtn.innerHTML = '<i class="fas fa-arrow-up" aria-hidden="true"></i>';
-    document.body.appendChild(backToTopBtn);
-
-    // Create progress bar wrapper and bar
-    const progressWrapper = document.createElement('div');
-    progressWrapper.className = 'progress-wrapper';
-    
+// Initialize scroll features when the DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    // Create and append the reading progress bar
     const progressBar = document.createElement('div');
-    progressBar.id = 'reading-progress';
-    progressWrapper.appendChild(progressBar);
-    
-    // Insert progress bar at the top of the page
-    document.body.insertBefore(progressWrapper, document.body.firstChild);
+    progressBar.id = 'reading-progress-bar';
+    document.body.appendChild(progressBar);
 
-    // Function to calculate reading progress
+    // Create and append the back to top button
+    const backToTopButton = document.createElement('button');
+    backToTopButton.id = 'back-to-top-btn';
+    backToTopButton.setAttribute('aria-label', 'Scroll back to top');
+    backToTopButton.innerHTML = '↑';
+    document.body.appendChild(backToTopButton);
+
+    // Function to update reading progress
     function updateReadingProgress() {
         const docElement = document.documentElement;
-        const bodyElement = document.body;
+        const body = document.body;
         const windowHeight = window.innerHeight;
         
-        // Total scrollable distance
-        const totalHeight = Math.max(
-            bodyElement.scrollHeight,
-            bodyElement.offsetHeight,
+        // Calculate total scrollable height
+        const scrollable = Math.max(
+            body.scrollHeight,
+            body.offsetHeight,
             docElement.clientHeight,
             docElement.scrollHeight,
             docElement.offsetHeight
         ) - windowHeight;
         
-        // How far we've scrolled
+        // Calculate how far we've scrolled
         const scrolled = window.scrollY;
         
-        // Calculate percentage
-        const progressPercent = (scrolled / totalHeight) * 100;
-        
-        // Update progress bar width
-        progressBar.style.width = `${Math.min(progressPercent, 100)}%`;
-        
-        // Update back to top button visibility
-        if (scrolled > 300) {
-            backToTopBtn.classList.add('show');
-        } else {
-            backToTopBtn.classList.remove('show');
-        }
-    }    // Listen for scroll events
-    window.addEventListener('scroll', updateReadingProgress);
-    window.addEventListener('resize', updateReadingProgress);
+        // Calculate and set the progress percentage
+        const progressPercentage = (scrolled / scrollable) * 100;
+        progressBar.style.width = `${Math.min(100, Math.max(0, progressPercentage))}%`;
 
-    // Smooth scroll to top when button is clicked
-    backToTopBtn.addEventListener('click', () => {
+        // Show/hide back to top button
+        backToTopButton.style.display = scrolled > windowHeight / 2 ? 'block' : 'none';
+    }
+
+    // Scroll to top function
+    backToTopButton.addEventListener('click', function() {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
         });
     });
 
-    // Initial progress update
-    updateReadingProgress();
-});
-    });
-
-    // Smooth scroll to top when button is clicked
-    backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-
-    // Add keyboard support for back to top button
-    backToTopBtn.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
+    // Listen for scroll events
+    let ticking = false;
+    document.addEventListener('scroll', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                updateReadingProgress();
+                ticking = false;
             });
+            ticking = true;
         }
     });
+
+    // Initial update
+    updateReadingProgress();
 });
