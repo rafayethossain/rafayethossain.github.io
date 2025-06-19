@@ -38,11 +38,11 @@
         {%- endif -%}
       {%- endfor -%}
       {% if site.post_search %}
-        <li class="nav-item" role="none">
-          <a class="nav-link" id="nav-search-link" href="#" title="Search" role="menuitem" tabindex="0">
-            <span id="nav-search-icon" class="fa fa-search" aria-hidden="true"></span>
-            <span id="nav-search-text">Search</span>
-          </a>
+        <li class="nav-item nav-search-item" role="none">
+          <button class="navbar-search-button" id="nav-search" aria-label="Open search" aria-expanded="false" aria-controls="beautifuljekyll-search-overlay">
+            <i class="fas fa-search" aria-hidden="true"></i>
+            <span class="sr-only">Search</span>
+          </button>
         </li>
       {%- endif -%}
     </ul>

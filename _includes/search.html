@@ -1,18 +1,105 @@
 {% if site.post_search %}
 
-<div id="beautifuljekyll-search-overlay">
-
-  <div id="nav-search-exit" title="Exit search">✕</div>
-  <input type="text" id="nav-search-input" placeholder="Search">
-  <ul id="search-results-container"></ul>
+<div id="beautifuljekyll-search-overlay" class="search-overlay" role="dialog" aria-modal="true" aria-label="Search site content">
+  <div class="search-overlay-content">
+    <button id="nav-search-exit" class="search-overlay-close" aria-label="Close search">
+      <i class="fas fa-times" aria-hidden="true"></i>
+    </button>
+    
+    <div class="search-input-group">
+      <i class="fas fa-search search-icon" aria-hidden="true"></i>
+      <input type="search" 
+             id="nav-search-input" 
+             class="search-input" 
+             placeholder="Search blog posts..."
+             aria-label="Search blog posts"
+             autocomplete="off"
+             spellcheck="false">
+    </div>
+    
+    <div class="search-results">
+      <ul id="search-results-container" class="search-results-list" role="listbox" aria-label="Search results">
+        <!-- Results will be dynamically inserted here -->
+      </ul>
+      <div id="search-no-results" class="search-no-results" hidden>
+        <p>No results found</p>
+      </div>
+    </div>
+  </div>
   
   <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
   <script>
-    SimpleJekyllSearch({
-      searchInput: document.getElementById('nav-search-input'),
-      resultsContainer: document.getElementById('search-results-container'),
-      json: '{{ site.baseurl }}/assets/data/searchcorpus.json' 
-    });
+    (function() {
+      var searchOverlay = document.getElementById('beautifuljekyll-search-overlay');
+      var searchButton = document.getElementById('nav-search');
+      var closeButton = document.getElementById('nav-search-exit');
+      var searchInput = document.getElementById('nav-search-input');
+      var resultsContainer = document.getElementById('search-results-container');
+      var noResults = document.getElementById('search-no-results');
+      
+      // Initialize search
+      var search = SimpleJekyllSearch({
+        searchInput: searchInput,
+        resultsContainer: resultsContainer,
+        json: '{{ site.baseurl }}/assets/data/searchcorpus.json',
+        searchResultTemplate: '<li role="option"><a href="{url}" class="search-result-link"><div class="search-result-title">{title}</div><div class="search-result-snippet">{snippet}</div></a></li>',
+        noResultsText: '',
+        limit: 10,
+        fuzzy: false,
+        exclude: ['Welcome']
+      });
+
+      // Show overlay when search button is clicked
+      if (searchButton) {
+        searchButton.addEventListener('click', function() {
+          searchOverlay.classList.add('is-active');
+          document.body.classList.add('search-active');
+          searchInput.focus();
+          searchButton.setAttribute('aria-expanded', 'true');
+        });
+      }
+
+      // Close overlay when close button is clicked
+      if (closeButton) {
+        closeButton.addEventListener('click', function() {
+          closeSearchOverlay();
+        });
+      }
+
+      // Close overlay when Escape key is pressed
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && searchOverlay.classList.contains('is-active')) {
+          closeSearchOverlay();
+        }
+      });
+
+      // Close overlay when clicking outside
+      searchOverlay.addEventListener('click', function(e) {
+        if (e.target === searchOverlay) {
+          closeSearchOverlay();
+        }
+      });
+
+      function closeSearchOverlay() {
+        searchOverlay.classList.remove('is-active');
+        document.body.classList.remove('search-active');
+        searchButton.setAttribute('aria-expanded', 'false');
+        searchInput.value = '';
+        resultsContainer.innerHTML = '';
+        noResults.hidden = true;
+      }
+
+      // Handle no results
+      searchInput.addEventListener('input', function() {
+        setTimeout(function() {
+          if (resultsContainer.children.length === 0) {
+            noResults.hidden = false;
+          } else {
+            noResults.hidden = true;
+          }
+        }, 100);
+      });
+    })();
   </script>
 </div>
 
