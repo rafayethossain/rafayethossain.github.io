@@ -1596,4 +1596,162 @@ body.dark-mode footer a:hover {
     border-color: var(--link-color-dark, #3FB0AC);
 }
 
+/* Enhanced card and section styles */
+.card-section, .bmc-cta, .creator-card, .related-posts-section {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-section::before, .bmc-cta::before, .creator-card::before, .related-posts-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--link-col), var(--hover-col));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-section:hover::before, .bmc-cta:hover::before, .creator-card:hover::before, .related-posts-section:hover::before {
+  opacity: 1;
+}
+
+/* Enhanced Buy Me a Coffee styles */
+.bmc-cta {
+  background: linear-gradient(135deg, #fffbe7, #fff8e6);
+  box-shadow: 0 8px 32px rgba(255, 196, 72, 0.12);
+  border: 1px solid rgba(255, 196, 72, 0.2);
+  padding: 2rem;
+}
+
+.bmc-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(255, 196, 72, 0.18);
+}
+
+.bmc-cta .bmc-btn {
+  background: linear-gradient(90deg, #ffdd00, #ffd000);
+  box-shadow: 0 4px 12px rgba(255, 208, 0, 0.3);
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+
+.bmc-cta .bmc-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 208, 0, 0.4);
+}
+
+/* Enhanced About Creator styles */
+.creator-card {
+  background: linear-gradient(135deg, var(--page-col), rgba(var(--link-color-rgb), 0.03));
+  box-shadow: 0 8px 32px rgba(var(--link-color-rgb), 0.08);
+  border: 1px solid rgba(var(--link-color-rgb), 0.1);
+}
+
+.creator-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(var(--link-color-rgb), 0.12);
+}
+
+.creator-card .avatar {
+  border: 3px solid var(--page-col);
+  box-shadow: 0 4px 20px rgba(var(--link-color-rgb), 0.15);
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+
+.creator-card:hover .avatar {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 24px rgba(var(--link-color-rgb), 0.2);
+}
+
+/* Enhanced Related Posts styles */
+.related-posts-section {
+  background: linear-gradient(135deg, var(--page-col), rgba(var(--link-color-rgb), 0.02));
+  box-shadow: 0 8px 32px rgba(var(--link-color-rgb), 0.08);
+  border: 1px solid rgba(var(--link-color-rgb), 0.1);
+  padding: 2.5rem 2rem;
+}
+
+.related-posts-section h2 {
+  position: relative;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.related-posts-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--link-col), var(--hover-col));
+  border-radius: 3px;
+}
+
+.related-posts-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.related-post-card {
+  background: var(--page-col);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid rgba(var(--link-color-rgb), 0.1);
+  box-shadow: 0 4px 16px rgba(var(--link-color-rgb), 0.06);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.related-post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(var(--link-color-rgb), 0.1);
+  border-color: rgba(var(--link-color-rgb), 0.2);
+}
+
+.related-post-card a.post-title {
+  color: var(--text-col);
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  text-decoration: none;
+  margin-bottom: 0.8rem;
+  transition: all 0.2s ease;
+}
+
+.related-post-card a.post-title:hover {
+  color: var(--link-col);
+}
+
+/* Dark mode enhancements */
+body.dark-mode .bmc-cta {
+  background: linear-gradient(135deg, #2d2417, #332919);
+  border-color: rgba(255, 196, 72, 0.1);
+}
+
+body.dark-mode .creator-card,
+body.dark-mode .related-posts-section {
+  background: linear-gradient(135deg, var(--navbar-col), rgba(var(--link-color-dark-rgb), 0.05));
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .related-post-card {
+  background: var(--navbar-col);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .related-post-card:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
 
