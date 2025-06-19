@@ -33,18 +33,36 @@
             {% endif %}
           {% endif %}
           
-          {% if include.type == "post" %} 
-            {% if page.author %}
-              By <strong>{{ page.author | strip_html }}</strong><br>
-            {% endif%}
-            <span class="post-meta">Posted on {{ page.date | date: date_format }}</span>
-            {% if page.last-updated %}
-              <span class="post-meta">
-                <span class="d-none d-md-inline middot">&middot;</span>
-                Last updated {{ page.last-updated | date: date_format }}
+          {% if include.type == "post" %}
+            <div class="post-meta">
+              {% if page.author %}
+                <span class="meta-item">
+                  <i class="fas fa-user" aria-hidden="true"></i>
+                  By <strong>{{ page.author | strip_html }}</strong>
+                </span>
+              {% endif %}
+              
+              <span class="meta-item">
+                <i class="fas fa-calendar" aria-hidden="true"></i>
+                {{ page.date | date: date_format }}
               </span>
-            {% endif %}
-            {% include readtime.html %}
+              
+              {% if page.last-updated %}
+                <span class="meta-item">
+                  <i class="fas fa-sync" aria-hidden="true"></i>
+                  Updated {{ page.last-updated | date: date_format }}
+                </span>
+              {% endif %}
+              
+              {% include readtime.html %}
+              
+              {% if page.category %}
+                <span class="meta-item">
+                  <i class="fas fa-folder" aria-hidden="true"></i>
+                  <a href="{{ '/categories#' | append: page.category | relative_url }}">{{ page.category }}</a>
+                </span>
+              {% endif %}
+            </div>
           {% endif %}
         </div>
       </div>

@@ -7,12 +7,12 @@
 {% endfor %}
 
 {% if any-share-links %}
-<section id = "social-share-section">
-  <span class="sr-only">Share: </span>
+<section id="social-share-section">
+  <span class="meta-item">Share:</span>
 
   {% if site.share-links-active.twitter %}
     <a href="https://twitter.com/intent/tweet?text={{ page.title | strip_html | url_encode }}&url={{ page.url | absolute_url | url_encode }}"
-      class="btn btn-social-icon btn-twitter" title="Share on X (Twitter)">
+      class="btn" title="Share on X (Twitter)" target="_blank" rel="noopener noreferrer">
       <span class="fab fa-fw fa-x-twitter" aria-hidden="true"></span>
       <span class="sr-only">X (Twitter)</span>
     </a>
@@ -20,7 +20,7 @@
 
   {% if site.share-links-active.facebook %}
     <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | url_encode }}"
-      class="btn btn-social-icon btn-facebook" title="Share on Facebook">
+      class="btn" title="Share on Facebook" target="_blank" rel="noopener noreferrer">
       <span class="fab fa-fw fa-facebook" aria-hidden="true"></span>
       <span class="sr-only">Facebook</span>
     </a>
@@ -44,12 +44,26 @@
 
   {% if site.share-links-active.reddit %}
     <a href="https://www.reddit.com/submit?url={{ page.url | absolute_url | url_encode }}"
-      class="btn btn-social-icon btn-reddit" title="Share on Reddit">
+      class="btn" title="Share on Reddit" target="_blank" rel="noopener noreferrer">
       <span class="fab fa-fw fa-reddit" aria-hidden="true"></span>
       <span class="sr-only">Reddit</span>
     </a>
   {% endif %}
 
-</section>
+  <button class="btn btn-copy" title="Copy URL" aria-label="Copy page URL" onclick="copyPageUrl(this)">
+    <span class="fas fa-fw fa-link" aria-hidden="true"></span>
+    <span class="copy-feedback">Copied!</span>
+  </button>
 
+  <script>
+    function copyPageUrl(button) {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        button.classList.add('copied');
+        setTimeout(() => button.classList.remove('copied'), 2000);
+      }).catch(err => {
+        console.error('Failed to copy URL:', err);
+      });
+    }
+  </script>
+</section>
 {% endif %}

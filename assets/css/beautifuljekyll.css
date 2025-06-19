@@ -2116,38 +2116,57 @@ body.dark-mode img {
 /* Print styles */
 @media print {
   .navbar,
+  .pagination,
   .social-links,
-  .share-section,
-  .comments-section {
+  #social-share-section,
+  .comments,
+  #header-gh-btns,
+  .blog-tags {
     display: none !important;
   }
 
-  body {
+  .blog-post {
     font-size: 12pt;
     line-height: 1.5;
-    color: #000;
-    background: #fff;
+    color: #000 !important;
   }
 
-  a {
-    color: #000;
-    text-decoration: underline;
+  .blog-post a {
+    text-decoration: none !important;
+    color: #000 !important;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    page-break-after: avoid;
-    page-break-inside: avoid;
+  .blog-post a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+    color: #666;
   }
 
-  img {
+  .blog-post img {
     max-width: 100% !important;
     page-break-inside: avoid;
   }
 
-  pre, blockquote {
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    color: #000 !important;
+  }
+
+  table, figure {
     page-break-inside: avoid;
-    border: 1px solid #ccc;
-    padding: 1rem;
+  }
+
+  .post-meta {
+    font-size: 10pt;
+    color: #666 !important;
+  }
+
+  .meta-item i {
+    display: none;
+  }
+
+  @page {
+    margin: 2cm;
   }
 }
 

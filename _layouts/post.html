@@ -4,6 +4,30 @@ layout: base
 
 {% include header.html type="post" %}
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+  {% if page.last-updated %}"dateModified": {{ page.last-updated | date_to_xmlschema | jsonify }},{% endif %}
+  {% if page.author %}"author": {
+    "@type": "Person",
+    "name": {{ page.author | jsonify }}
+  },{% endif %}
+  {% if page.subtitle %}"description": {{ page.subtitle | jsonify }},{% endif %}
+  {% if site.title %}"publisher": {
+    "@type": "Organization",
+    "name": {{ site.title | jsonify }}
+  },{% endif %}
+  {% if page.cover-img %}"image": {{ page.cover-img | first | absolute_url | jsonify }},{% endif %}
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ page.url | absolute_url | jsonify }}
+  }
+}
+</script>
+
 <main class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}">
   <div class="row">
     <div class="{% if page.full-width %} col {% else %} col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 {% endif %}">
