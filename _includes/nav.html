@@ -1,9 +1,9 @@
-<nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom {% if page.nav-short %}top-nav-short-permanent{% else %}top-nav-regular{% endif %}" role="navigation" aria-label="Main Navigation">
+<nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom {% if page.nav-short %}top-nav-short-permanent{% else %}top-nav-regular{% endif %}">
 
   {%- if site.title-img -%}
-    <a class="navbar-brand navbar-brand-logo" href="{{ '/' | absolute_url }}" aria-label="{{ site.title }} Home"><img alt="{{ site.title }} Logo" src="{{ site.title-img | relative_url}}"/></a>
+    <a class="navbar-brand navbar-brand-logo" href="{{ '/' | absolute_url }}"><img alt="{{ site.title }} Logo" src="{{ site.title-img | relative_url}}"/></a>
   {%- elsif site.title -%}
-    <a class="navbar-brand" href="{{ '/' | absolute_url }}" aria-label="{{ site.title }} Home">{{ site.title }}</a>
+    <a class="navbar-brand" href="{{ '/' | absolute_url }}">{{ site.title }}</a>
   {%- endif -%}
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,37 +11,30 @@
   </button>
 
   <div class="collapse navbar-collapse" id="main-navbar">
-    <ul class="navbar-nav ml-auto" role="menubar">
+    <ul class="navbar-nav ml-auto">
       {%- for link in site.navbar-links -%}
-        {%- assign is_active = false -%}
-        {%- if page.url == '/' and link[1] == ' ' -%}
-          {%- assign is_active = true -%}
-        {%- elsif page.url contains link[1] and link[1] != ' ' -%}
-          {%- assign is_active = true -%}
-        {%- endif -%}
         {%- if link[1].first %}
-          <li class="nav-item dropdown" role="none">
-            {%- assign dropdown_id = 'navbarDropdown-' | append: link[0] | replace: ' ', '-' | downcase -%}
-            <a class="nav-link dropdown-toggle{% if is_active %} active{% endif %}" href="#" id="{{ dropdown_id }}" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" tabindex="0">{{ link[0] }}</a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="{{ dropdown_id }}" role="menu">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link[0] }}</a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
               {%- for childlink in link[1] -%}
-              {%- assign label = childlink | first | first -%}
-              {%- assign url = childlink | first | last -%}
-              <a class="dropdown-item{% if page.url contains url %} active{% endif %}" href="{{ url }}" role="menuitem" tabindex="0">{{ label }}</a>
+                {%- for linkparts in childlink %}
+                  <a class="dropdown-item" href="{{ linkparts[1] | relative_url }}">{{ linkparts[0] }}</a>
+                {%- endfor -%}
               {%- endfor %}
             </div>
           </li>
         {% else %}
-          <li class="nav-item" role="none">
-            <a class="nav-link{% if is_active %} active{% endif %}" href="{{ link[1] | relative_url }}" role="menuitem" tabindex="0"{% if is_active %} aria-current="page"{% endif %}>{{ link[0] }}</a>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ link[1] | relative_url }}">{{ link[0] }}</a>
           </li>
         {%- endif -%}
       {%- endfor -%}
       {% if site.post_search %}
-        <li class="nav-item" role="none">
-          <a class="nav-link" id="nav-search-link" href="#" title="Search" role="menuitem" tabindex="0">
-            <span id="nav-search-icon" class="fa fa-search" aria-hidden="true"></span>
-            <span id="nav-search-text" class="d-none d-md-inline">Search</span>
+        <li class="nav-item">
+          <a class="nav-link" id="nav-search-link" href="#" title="Search">
+            <span id="nav-search-icon" class="fa fa-search"></span>
+            <span id="nav-search-text">Search</span>
           </a>
         </li>
       {%- endif -%}
@@ -57,118 +50,13 @@
   {% if site.avatar and page.show-avatar != false %}
     <div class="avatar-container">
       <div class="avatar-img-border">
-        <a href="{{ '/' | absolute_url }}" aria-label="Home">
+        <a href="{{ '/' | absolute_url }}">
           <img alt="Navigation bar avatar" class="avatar-img" src="{{ site.avatar | relative_url }}" />
         </a>
       </div>
     </div>
   {% endif %}
 
-  <button id="darkModeToggle" class="btn btn-sm" aria-pressed="false" aria-label="Toggle dark mode" style="margin-left:1rem; background:var(--navbar-col,#F8F9FA); color:var(--navbar-text-col,#222); border-radius:1.2rem; border:none; font-weight:700; padding:0.4rem 1.2rem; cursor:pointer; transition:all 0.3s ease;">
-    <span id="darkModeIcon" aria-hidden="true">🌙</span>
-    <span class="visually-hidden">Toggle dark and light mode</span>
-  </button>
 </nav>
 
-<script>
-(function() {
-  function setDarkMode(on) {
-    var btn = document.getElementById('darkModeToggle');
-    var icon = document.getElementById('darkModeIcon');
-    var root = document.documentElement;
-    
-    // Smooth transition
-    root.style.setProperty('--transition-duration', '0.3s');
-    document.body.style.transition = 'background-color var(--transition-duration) ease, color var(--transition-duration) ease';
-    
-    if(on) {
-      document.body.classList.add('dark-mode');
-      localStorage.setItem('darkMode', 'on');
-      icon.innerText = '☀️';
-      btn.setAttribute('aria-pressed', 'true');
-      btn.setAttribute('aria-label', 'Switch to light mode');
-      
-      // Add transition for dark mode specific elements
-      document.querySelectorAll('a, button, .navbar, pre, code, blockquote, table').forEach(el => {
-        el.style.transition = 'all var(--transition-duration) ease';
-      });
-    } else {
-      document.body.classList.remove('dark-mode');
-      localStorage.setItem('darkMode', 'off');
-      icon.innerText = '🌙';
-      btn.setAttribute('aria-pressed', 'false');
-      btn.setAttribute('aria-label', 'Switch to dark mode');
-    }
-  }
-  
-  // Check system preference for initial load
-  function checkSystemPreference() {
-    var darkMode = localStorage.getItem('darkMode');
-    if (!darkMode) {
-      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      setDarkMode(prefersDark);
-    } else {
-      setDarkMode(darkMode === 'on');
-    }
-  }
-  
-  // Watch for system theme changes
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-    if (!localStorage.getItem('darkMode')) {
-      setDarkMode(e.matches);
-    }
-  });
-  
-  // Initial setup
-  checkSystemPreference();
-  
-  // Click handler
-  document.getElementById('darkModeToggle').onclick = function() {
-    setDarkMode(!document.body.classList.contains('dark-mode'));
-  };
-  
-  // Keyboard accessibility
-  document.getElementById('darkModeToggle').addEventListener('keyup', function(e) {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      setDarkMode(!document.body.classList.contains('dark-mode'));
-    }
-  });
-})();
-</script>
-
 {% include search.html %}
-<link rel="stylesheet" href="{{ '/assets/css/darkmode-toggle-accessible.css' | relative_url }}">
-<style>
-    /* Highlight active nav link */
-    .navbar-nav .nav-link.active, .navbar-nav .nav-link[aria-current="page"] {
-      color: var(--hover-col, #003366) !important;
-      font-weight: bold;
-      border-bottom: 2.5px solid var(--hover-col, #003366);
-      background: none !important;
-      border-radius: 0.25rem 0.25rem 0 0;
-    }
-    /* Hover/focus effect for nav links */
-    .navbar-nav .nav-link:hover, .navbar-nav .nav-link:focus {
-      color: var(--footer-link-col, #FFD700) !important;
-      background: none !important;
-      border-bottom: 2.5px solid var(--footer-link-col, #FFD700);
-      border-radius: 0.25rem 0.25rem 0 0;
-      text-decoration: none;
-      transition: border-bottom 0.2s, color 0.2s;
-    }
-    /* Hover/focus effect for dropdown items */
-    .dropdown-menu .dropdown-item:hover, .dropdown-menu .dropdown-item:focus {
-      color: var(--footer-link-col, #FFD700) !important;
-      background: var(--hover-col, #003366);
-      border-radius: 0.25rem;
-      text-decoration: none;
-      transition: background 0.2s, color 0.2s;
-    }
-    /* Hover/focus effect for navbar buttons */
-    #darkModeToggle:hover, #darkModeToggle:focus {
-      background: var(--hover-col, #003366) !important;
-      color: var(--footer-link-col, #FFD700) !important;
-      transition: background 0.2s, color 0.2s;
-    }
-  </style>
