@@ -1733,25 +1733,271 @@ body.dark-mode footer a:hover {
   color: var(--link-col);
 }
 
-/* Dark mode enhancements */
-body.dark-mode .bmc-cta {
-  background: linear-gradient(135deg, #2d2417, #332919);
-  border-color: rgba(255, 196, 72, 0.1);
+/* Enhanced About Me Page */
+.aboutme-modern {
+  max-width: 800px;
+  margin: 3rem auto;
+  background: linear-gradient(135deg, var(--page-col), rgba(var(--link-color-rgb), 0.02));
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(var(--link-color-rgb), 0.08);
+  padding: 3rem;
+  position: relative;
+  border: 1px solid rgba(var(--link-color-rgb), 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-body.dark-mode .creator-card,
-body.dark-mode .related-posts-section {
+.aboutme-modern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--link-col), var(--hover-col));
+  border-radius: 20px 20px 0 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.aboutme-modern:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(var(--link-color-rgb), 0.12);
+}
+
+.aboutme-modern:hover::before {
+  opacity: 1;
+}
+
+.aboutme-modern .avatar {
+  position: relative;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.aboutme-modern .avatar::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140px;
+  height: 140px;
+  background: linear-gradient(135deg, var(--link-col), var(--hover-col));
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.1;
+  transition: all 0.3s ease;
+}
+
+.aboutme-modern .avatar img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--page-col);
+  box-shadow: 0 4px 20px rgba(var(--link-color-rgb), 0.15);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.aboutme-modern:hover .avatar::before {
+  width: 150px;
+  height: 150px;
+  opacity: 0.15;
+}
+
+.aboutme-modern:hover .avatar img {
+  transform: scale(1.02);
+  box-shadow: 0 6px 24px rgba(var(--link-color-rgb), 0.2);
+}
+
+/* Enhanced 404 Page */
+.modern-404 {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, var(--page-col), rgba(var(--link-color-rgb), 0.02));
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(var(--link-color-rgb), 0.08);
+  text-align: center;
+  position: relative;
+  border: 1px solid rgba(var(--link-color-rgb), 0.1);
+}
+
+.modern-404 h1 {
+  font-size: 8rem;
+  background: linear-gradient(135deg, var(--link-col), var(--hover-col));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.modern-404 h1::after {
+  content: "404";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12rem;
+  opacity: 0.03;
+  color: var(--text-col);
+  z-index: -1;
+}
+
+.modern-404 .back-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  background: linear-gradient(90deg, var(--link-col), var(--hover-col));
+  color: #fff;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(var(--link-color-rgb), 0.2);
+}
+
+.modern-404 .back-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(var(--link-color-rgb), 0.3);
+}
+
+/* Enhanced Tags Page */
+.tags-modern {
+  max-width: 1000px;
+  margin: 3rem auto;
+  background: linear-gradient(135deg, var(--page-col), rgba(var(--link-color-rgb), 0.02));
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(var(--link-color-rgb), 0.08);
+  padding: 3rem;
+  position: relative;
+  border: 1px solid rgba(var(--link-color-rgb), 0.1);
+}
+
+.tags-modern h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.tags-modern h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--link-col), var(--hover-col));
+  border-radius: 3px;
+}
+
+.tags-modern .tag-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0 3rem;
+}
+
+.tags-modern .tag-nav a {
+  padding: 0.6rem 1.2rem;
+  background: rgba(var(--link-color-rgb), 0.08);
+  color: var(--link-col);
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.tags-modern .tag-nav a:hover {
+  background: rgba(var(--link-color-rgb), 0.15);
+  transform: translateY(-2px);
+}
+
+.tags-modern .tag-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.tags-modern .tag-section {
+  background: var(--page-col);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(var(--link-color-rgb), 0.06);
+  border: 1px solid rgba(var(--link-color-rgb), 0.08);
+  transition: all 0.3s ease;
+}
+
+.tags-modern .tag-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(var(--link-color-rgb), 0.1);
+}
+
+.tags-modern .tag-heading {
+  color: var(--link-col);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(var(--link-color-rgb), 0.1);
+}
+
+.tags-modern .tag-posts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tags-modern .tag-posts li {
+  margin-bottom: 0.8rem;
+}
+
+.tags-modern .tag-posts a {
+  color: var(--text-col);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: block;
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+.tags-modern .tag-posts a:hover {
+  color: var(--link-col);
+  background: rgba(var(--link-color-rgb), 0.05);
+}
+
+/* Dark mode enhancements */
+body.dark-mode .aboutme-modern,
+body.dark-mode .modern-404,
+body.dark-mode .tags-modern {
   background: linear-gradient(135deg, var(--navbar-col), rgba(var(--link-color-dark-rgb), 0.05));
   border-color: rgba(255, 255, 255, 0.1);
 }
 
-body.dark-mode .related-post-card {
+body.dark-mode .tags-modern .tag-section {
   background: var(--navbar-col);
   border-color: rgba(255, 255, 255, 0.08);
 }
 
-body.dark-mode .related-post-card:hover {
-  border-color: rgba(255, 255, 255, 0.15);
+body.dark-mode .tags-modern .tag-nav a {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .tags-modern .tag-nav a:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+body.dark-mode .tags-modern .tag-posts a:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .modern-404 h1::after {
+  opacity: 0.1;
 }
 
 
