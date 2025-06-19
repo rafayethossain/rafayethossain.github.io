@@ -2,27 +2,12 @@
 
 <div id="beautifuljekyll-search-overlay">
   <div id="nav-search-exit" title="Exit search">✕</div>
-  <input type="text" id="nav-search-input" placeholder="Search">
-    
-    <div class="search-results">
-      <ul id="search-results-container" class="search-results-list" role="listbox" aria-label="Search results">
-        <!-- Results will be dynamically inserted here -->
-      </ul>
-      <div id="search-no-results" class="search-no-results" hidden>
-        <p>No results found</p>
-      </div>
-    </div>
-  </div>
+  <input type="text" id="nav-search-input" placeholder="Search" aria-label="Search blog posts">
+  <ul id="search-results-container" role="listbox" aria-label="Search results"></ul>
+  <div id="no-search-results" hidden>No results found</div>
   
   <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
   <script>
-    (function() {
-      var searchOverlay = document.getElementById('beautifuljekyll-search-overlay');
-      var searchButton = document.getElementById('nav-search');
-      var closeButton = document.getElementById('nav-search-exit');
-      var searchInput = document.getElementById('nav-search-input');
-      var resultsContainer = document.getElementById('search-results-container');
-      var noResults = document.getElementById('search-no-results');
       
       // Initialize search
       var search = SimpleJekyllSearch({
