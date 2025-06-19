@@ -1955,4 +1955,200 @@ body.dark-mode .callout {
   }
 }
 
+/* Accessibility Improvements */
+
+/* Focus styles */
+:focus {
+  outline: 3px solid var(--link-col);
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 3px solid var(--link-col);
+  outline-offset: 2px;
+}
+
+/* Skip to main content link */
+.skip-to-main {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  padding: 1rem 2rem;
+  background: var(--link-col);
+  color: #fff;
+  z-index: 9999;
+  transition: top 0.3s ease;
+}
+
+.skip-to-main:focus {
+  top: 0;
+}
+
+/* Enhanced keyboard navigation */
+[role="button"],
+button,
+a {
+  cursor: pointer;
+}
+
+[role="button"]:focus,
+button:focus,
+a:focus {
+  outline: 3px solid var(--link-col);
+  outline-offset: 2px;
+}
+
+/* Better color contrast */
+.post-meta,
+.blog-post .date,
+.post-preview .post-meta {
+  color: var(--mid-col);
+  font-weight: 500;
+}
+
+/* Improved form controls */
+input,
+textarea,
+select {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 2px solid rgba(var(--link-color-rgb), 0.2);
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--link-col);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(var(--link-color-rgb), 0.1);
+}
+
+/* ARIA landmarks */
+[role="banner"],
+[role="navigation"],
+[role="main"],
+[role="complementary"],
+[role="contentinfo"] {
+  margin: 0;
+  padding: 1rem 0;
+}
+
+/* Performance optimizations */
+
+/* Better image rendering */
+img {
+  image-rendering: auto;
+  transform: translateZ(0);
+}
+
+/* Improved animation performance */
+.post-preview,
+.post-title,
+.navbar,
+.nav-link,
+button,
+[role="button"] {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Enhanced dark mode accessibility */
+body.dark-mode {
+  /* Improved dark mode contrast */
+  --mid-col: #9EA7B3;
+  --text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .post-preview .post-title {
+  text-shadow: var(--text-shadow);
+}
+
+body.dark-mode img {
+  opacity: 0.9;
+}
+
+/* Mobile accessibility improvements */
+@media (max-width: 768px) {
+  /* Larger touch targets */
+  button,
+  [role="button"],
+  .nav-link,
+  .post-preview a {
+    padding: 0.75rem;
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Better spacing for touch */
+  .post-preview {
+    padding: 1.5rem 0;
+    margin: 0.5rem 0;
+  }
+
+  /* Improved form controls on mobile */
+  input,
+  select,
+  textarea {
+    font-size: 16px; /* Prevents iOS zoom */
+    padding: 0.75rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .navbar,
+  .social-links,
+  .share-section,
+  .comments-section {
+    display: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+  }
+
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  pre, blockquote {
+    page-break-inside: avoid;
+    border: 1px solid #ccc;
+    padding: 1rem;
+  }
+}
+
 
