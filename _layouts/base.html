@@ -29,19 +29,29 @@ common-js:
 <body>
   {% include gtm_body.html %}
 
-  <!-- Messenger Chat Plugin Code -->
-  <div class="messenger-chat-wrapper" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
-    <iframe 
-      src="https://www.facebook.com/v18.0/plugins/messenger_chat?app_id=&channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df2729bdb789c34%26domain%3Drafayethossain.github.io%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Frafayethossain.github.io%26relation%3Dparent.parent&container_width=0&locale=en_US&logged_in_greeting=Hello!%20How%20can%20I%20help%20you%3F&logged_out_greeting=Hello!%20How%20can%20I%20help%20you%3F&page_id=286087674751097&request_time=1687115123&sdk=joey"
-      width="120"
-      height="120"
-      style="border: none; visibility: visible;"
-      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-      allowfullscreen="true"
-      scrolling="no"
-      allowtransparency="true"
-      frameborder="0">
-    </iframe>
+  <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        xfbml   : true,
+        version : 'v18.0'
+      });
+    };
+
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+  <!-- Your Chat Plugin code -->
+  <div class="fb-customerchat"
+    attribution="setup_tool"
+    page_id="286087674751097">
   </div>
 
   {% include nav.html %}
