@@ -1,21 +1,8 @@
 {% if site.post_search %}
 
-<div id="beautifuljekyll-search-overlay" class="search-overlay" role="dialog" aria-modal="true" aria-label="Search site content">
-  <div class="search-overlay-content">
-    <button id="nav-search-exit" class="search-overlay-close" aria-label="Close search">
-      <i class="fas fa-times" aria-hidden="true"></i>
-    </button>
-    
-    <div class="search-input-group">
-      <i class="fas fa-search search-icon" aria-hidden="true"></i>
-      <input type="search" 
-             id="nav-search-input" 
-             class="search-input" 
-             placeholder="Search blog posts..."
-             aria-label="Search blog posts"
-             autocomplete="off"
-             spellcheck="false">
-    </div>
+<div id="beautifuljekyll-search-overlay">
+  <div id="nav-search-exit" title="Exit search">✕</div>
+  <input type="text" id="nav-search-input" placeholder="Search">
     
     <div class="search-results">
       <ul id="search-results-container" class="search-results-list" role="listbox" aria-label="Search results">
