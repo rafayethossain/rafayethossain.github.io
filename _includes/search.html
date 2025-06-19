@@ -1,16 +1,19 @@
 {% if site.post_search %}
 
 <div id="beautifuljekyll-search-overlay">
-  <div id="nav-search-exit" title="Exit search">✕</div>
-  <input type="text" id="nav-search-input" placeholder="Search" aria-label="Search blog posts">
+  <div id="nav-search-exit" title="Exit search" role="button" tabindex="0">✕</div>
+  <input type="text" id="nav-search-input" placeholder="Search posts..." aria-label="Search blog posts">
   <ul id="search-results-container" role="listbox" aria-label="Search results"></ul>
-  <div id="no-search-results" hidden>No results found</div>
-  
-  <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+  <div id="no-search-results" class="search-no-results" hidden>No results found</div>
+    <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
   <script>
+    (function() {
+      var searchInput = document.getElementById('nav-search-input');
+      var resultsContainer = document.getElementById('search-results-container');
+      var noResultsDiv = document.getElementById('no-search-results');
       
-      // Initialize search
-      var search = SimpleJekyllSearch({
+      // Initialize search with custom results handling
+      SimpleJekyllSearch({
         searchInput: searchInput,
         resultsContainer: resultsContainer,
         json: '{{ site.baseurl }}/assets/data/searchcorpus.json',
@@ -18,58 +21,34 @@
         noResultsText: '',
         limit: 10,
         fuzzy: false,
-        exclude: ['Welcome']
-      });
-
-      // Show overlay when search button is clicked
-      if (searchButton) {
-        searchButton.addEventListener('click', function() {
-          searchOverlay.classList.add('is-active');
-          document.body.classList.add('search-active');
-          searchInput.focus();
-          searchButton.setAttribute('aria-expanded', 'true');
-        });
-      }
-
-      // Close overlay when close button is clicked
-      if (closeButton) {
-        closeButton.addEventListener('click', function() {
-          closeSearchOverlay();
-        });
-      }
-
-      // Close overlay when Escape key is pressed
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && searchOverlay.classList.contains('is-active')) {
-          closeSearchOverlay();
+        exclude: ['Welcome'],
+        searchResultCallback: function(results) {
+          if (!results || results.length === 0) {
+            noResultsDiv.hidden = false;
+            resultsContainer.hidden = true;
+          } else {
+            noResultsDiv.hidden = true;
+            resultsContainer.hidden = false;
+          }
         }
       });
 
-      // Close overlay when clicking outside
-      searchOverlay.addEventListener('click', function(e) {
-        if (e.target === searchOverlay) {
-          closeSearchOverlay();
-        }
-      });
-
-      function closeSearchOverlay() {
-        searchOverlay.classList.remove('is-active');
-        document.body.classList.remove('search-active');
-        searchButton.setAttribute('aria-expanded', 'false');
+      // Clear results and hide no-results message when closing search
+      document.getElementById('nav-search-exit').addEventListener('click', function() {
         searchInput.value = '';
         resultsContainer.innerHTML = '';
-        noResults.hidden = true;
-      }
+        noResultsDiv.hidden = true;
+        resultsContainer.hidden = false;
+      });
 
-      // Handle no results
-      searchInput.addEventListener('input', function() {
-        setTimeout(function() {
-          if (resultsContainer.children.length === 0) {
-            noResults.hidden = false;
-          } else {
-            noResults.hidden = true;
-          }
-        }, 100);
+      // Hide overlay on escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          searchInput.value = '';
+          resultsContainer.innerHTML = '';
+          noResultsDiv.hidden = true;
+          resultsContainer.hidden = false;
+        }
       });
     })();
   </script>

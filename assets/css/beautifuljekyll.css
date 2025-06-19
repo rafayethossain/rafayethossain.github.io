@@ -590,12 +590,46 @@ img {
 
 .search-no-results {
   text-align: center;
-  padding: 2rem;
   color: var(--text-muted);
+  margin-top: 2rem;
+  font-size: 1.1rem;
 }
 
-body.search-active {
-  overflow: hidden;
+#search-results-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  list-style: none;
+}
+
+#search-results-container li {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+#search-results-container li:hover {
+  background: rgba(var(--color-primary-rgb), 0.05);
+}
+
+.search-result-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.search-result-title {
+  color: var(--link-color);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.search-result-snippet {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 /* Dark mode enhancements */
