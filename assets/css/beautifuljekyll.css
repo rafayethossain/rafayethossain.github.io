@@ -771,7 +771,7 @@ footer .footer-custom-content {
 .post-preview .post-subtitle {
   margin: 0 0 0.5rem;
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   color: var(--mid-col);
 }
 
@@ -2167,6 +2167,204 @@ body.dark-mode img {
 
   @page {
     margin: 2cm;
+  }
+}
+
+/* Fix navbar and header layout */
+.navbar-custom {
+  position: relative;
+  z-index: 100;
+}
+
+.intro-header {
+  position: relative;
+  z-index: 10;
+  margin-top: 2rem;
+}
+
+.intro-header.big-img {
+  margin-top: 3.125rem;
+}
+
+/* Adjust post thumbnails */
+.post-image.post-image-normal {
+  width: 200px;
+  height: 150px;
+  margin-right: 1.5rem;
+  float: left;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.post-image.post-image-normal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.post-image.post-image-normal:hover img {
+  transform: scale(1.05);
+}
+
+/* Fix header spacing and post list layout */
+.header-section {
+  margin-top: 3.5rem;
+  position: relative;
+  z-index: 10;
+}
+
+.post-preview {
+  position: relative;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: var(--bg-secondary);
+  overflow: hidden;
+}
+
+.post-preview:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.post-preview .post-image.post-image-normal {
+  margin: -1.25rem -1.25rem 1rem -1.25rem;
+  width: calc(100% + 2.5rem);
+  height: 200px;
+  float: none;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.post-preview .post-title {
+  font-size: 1.75rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.post-preview .post-subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 0 0 1rem 0;
+}
+
+.post-preview .post-meta {
+  margin-bottom: 1rem;
+}
+
+.post-excerpt {
+  color: var(--text-muted);
+  margin: 1rem 0;
+}
+
+.post-read-more {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.post-read-more:hover,
+.post-read-more:focus {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .post-preview .post-image.post-image-normal {
+    width: 200px;
+    height: 150px;
+    float: right;
+    margin: 0 0 1rem 1.5rem;
+    border-radius: 0.5rem;
+  }
+
+  .header-section.has-img .big-img {
+    margin-top: 4rem;
+  }
+}
+
+/* Improve accessibility */
+.post-title-link:focus {
+  outline: none;
+}
+
+.post-title-link:focus .post-title {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+.blog-tags a {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  margin: 0.25rem;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  background-color: var(--tag-bg);
+  border-radius: 1rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.blog-tags a:hover,
+.blog-tags a:focus {
+  color: var(--link-color);
+  background-color: var(--tag-bg-hover);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+/* Fix for navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+}
+
+.navbar + .container-md,
+.navbar + .container-fluid {
+  padding-top: 3.5rem;
+}
+
+/* Skip link for keyboard navigation */
+.skip-to-content {
+  position: absolute;
+  left: 0.5rem;
+  top: -3.5rem;
+  z-index: 1031;
+  background: var(--link-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0 0 0.25rem 0.25rem;
+  transition: top 0.2s ease;
+  text-decoration: none;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* Add focus styles for keyboard navigation */
+:focus {
+  outline: 2px solid var(--link-color);
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* High contrast mode support */
+@media (forced-colors: active) {
+  .post-preview,
+  .blog-tags a,
+  .pagination .page-link {
+    border: 1px solid CanvasText;
   }
 }
 
