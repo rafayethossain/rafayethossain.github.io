@@ -257,6 +257,15 @@ date_format: "%B %-d, %Y"
 # Facebook App ID
 #fb_app_id: ""
 
+# Facebook Messenger Chat Configuration
+facebook:
+  messenger:
+    enabled: true
+    page_id: '286087674751097'  # Your Facebook Page ID
+    theme_color: '#0085A1'      # Theme color for the chat bubble
+    logged_in_greeting: "Hi! How can I help you?"
+    logged_out_greeting: "Hi! How can I help you?"
+
 #################################################################################
 # --- You don't need to touch anything below here (but you can if you want) --- #
 #################################################################################
