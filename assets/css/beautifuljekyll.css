@@ -31,6 +31,32 @@ layout: null
   --navbar-text-col-rgb: 34, 34, 34;
   --navbar-text-col-dark-rgb: 230, 230, 230;
   /* End RGB colors */
+
+  /* Typography Scale */
+  --h1-size: 2.5rem;
+  --h2-size: 2rem;
+  --h3-size: 1.75rem;
+  --h4-size: 1.5rem;
+  --h5-size: 1.25rem;
+  --h6-size: 1rem;
+  
+  /* Line Heights */
+  --body-line-height: 1.6;
+  --heading-line-height: 1.2;
+  
+  /* Spacing */
+  --section-spacing: 2.5rem;
+  --content-spacing: 1.5rem;
+  --heading-spacing: 1rem;
+  
+  /* Code Block Colors */
+  --code-bg: #f8f9fa;
+  --code-text: #e83e8c;
+  --pre-bg: #f8f9fa;
+  --pre-border: rgba(0,0,0,0.1);
+  --pre-text: #212529;
+  --pre-scrollbar: rgba(0,0,0,0.1);
+  --pre-scrollbar-thumb: rgba(0,0,0,0.3);
 }
 
 /* Dark mode variables */
@@ -47,6 +73,14 @@ body.dark-mode {
   --footer-link-col: #FFD700;
   --footer-hover-col: #FFA500;
   --mid-col: #B0B0B0;
+
+  --code-bg: #2d2d2d;
+  --code-text: #ff6b9a;
+  --pre-bg: #2d2d2d;
+  --pre-border: rgba(255,255,255,0.1);
+  --pre-text: #f8f9fa;
+  --pre-scrollbar: rgba(255,255,255,0.1);
+  --pre-scrollbar-thumb: rgba(255,255,255,0.3);
 }
 
 /* --- General --- */
@@ -58,6 +92,7 @@ html {
 body {
   font-family: var(--body-font);
   font-size: 1.125rem;
+  line-height: var(--body-line-height);
   color: var(--text-col);
   position: relative;
   background-color: var(--page-col);
@@ -69,34 +104,51 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 body > main {
   flex: 1;
 }
 p {
-  line-height: 1.5;
-  margin: 1.875rem 0;
+  margin: 1.5rem 0;
+  line-height: 1.8;
+  max-width: 70ch;
 }
 h1,h2,h3,h4,h5,h6 {
   font-family: var(--header-font);
-  font-weight: 800;
-  line-height: 1.1;
+  margin-top: var(--section-spacing);
+  margin-bottom: var(--heading-spacing);
+  font-weight: 700;
+  line-height: var(--heading-line-height);
+  color: var(--text-col);
 }
 h1 {
-  font-size: 2.25rem;
+  font-size: var(--h1-size);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  position: relative;
+  padding-bottom: 1rem;
+}
+h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--link-col), transparent);
+  border-radius: 2px;
 }
 h2 {
-  font-size: 1.875rem;
+  font-size: var(--h2-size);
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(var(--link-color-rgb), 0.1);
 }
-h3 {
-  font-size: 1.5rem;
-}
-h4 {
-  font-size: 1.125rem;
-}
-h1, h2, h3, h4 {
-  margin-top: 1.25rem;
-}
+h3 { font-size: var(--h3-size); }
+h4 { font-size: var(--h4-size); }
+h5 { font-size: var(--h5-size); }
+h6 { font-size: var(--h6-size); }
 a {
   color: var(--link-col);
 }
@@ -1089,17 +1141,99 @@ code {
   border-radius: 0.25rem;
 }
 
-pre code {
-  padding: 0;
-  background-color: transparent;
-  border-radius: 0;
+pre {
+  background: var(--pre-bg);
+  border: 1px solid var(--pre-border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  overflow: auto;
+  position: relative;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
-pre {
-  font-size: 0.875rem;
-  line-height: 1.5em;
-  border-radius: 0.25rem;
-  padding: 0.59375rem;
+pre code {
+  color: var(--pre-text);
+  background: none;
+  padding: 0;
+  border: none;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+}
+
+/* Code block scrollbar */
+pre::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+  background: var(--pre-scrollbar);
+}
+
+pre::-webkit-scrollbar-thumb {
+  background: var(--pre-scrollbar-thumb);
+  border-radius: 4px;
+}
+
+/* Language badge */
+pre[class*="language-"]::before {
+  content: attr(class);
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: var(--text-col);
+  font-size: 0.8rem;
+  font-family: var(--header-font);
+  background: rgba(var(--link-color-rgb), 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 0 8px 0 8px;
+  opacity: 0.8;
+}
+
+/* Inline code */
+code {
+  background: var(--code-bg);
+  color: var(--code-text);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+}
+
+/* Mobile Typography Adjustments */
+@media (max-width: 768px) {
+  :root {
+    --h1-size: 2rem;
+    --h2-size: 1.75rem;
+    --h3-size: 1.5rem;
+    --h4-size: 1.25rem;
+    --h5-size: 1.1rem;
+    --h6-size: 1rem;
+    --section-spacing: 2rem;
+    --content-spacing: 1.25rem;
+    --heading-spacing: 0.75rem;
+  }
+
+  html {
+    font-size: 16px;
+  }
+
+  body {
+    font-size: 1rem;
+  }
+
+  p {
+    margin: 1.25rem 0;
+  }
+
+  pre {
+    padding: 1rem;
+    font-size: 0.85rem;
+    margin: 1.25rem 0;
+  }
+
+  pre[class*="language-"]::before {
+    font-size: 0.75rem;
+    padding: 0.15rem 0.4rem;
+  }
 }
 .highlight pre {
   border: none;
@@ -1998,6 +2132,84 @@ body.dark-mode .tags-modern .tag-posts a:hover {
 
 body.dark-mode .modern-404 h1::after {
   opacity: 0.1;
+}
+
+/* Enhanced Typography */
+body {
+  font-family: var(--body-font);
+  font-size: 1.125rem;
+  line-height: var(--body-line-height);
+  color: var(--text-col);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+p {
+  margin: 1.5rem 0;
+  line-height: 1.8;
+}
+
+/* Enhanced Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--header-font);
+  margin-top: var(--section-spacing);
+  margin-bottom: var(--heading-spacing);
+  font-weight: 700;
+  line-height: var(--heading-line-height);
+  color: var(--text-col);
+}
+
+h1 {
+  font-size: var(--h1-size);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--link-col), transparent);
+  border-radius: 2px;
+}
+
+h2 {
+  font-size: var(--h2-size);
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(var(--link-color-rgb), 0.1);
+}
+
+h3 {
+  font-size: var(--h3-size);
+}
+
+h4 {
+  font-size: var(--h4-size);
+}
+
+h5 {
+  font-size: var(--h5-size);
+}
+
+h6 {
+  font-size: var(--h6-size);
+}
+
+/* Text Selection */
+::selection {
+  background: rgba(var(--link-color-rgb), 0.2);
+  color: var(--text-col);
 }
 
 
