@@ -1204,3 +1204,19 @@ th, td {
 html, body, .navbar, .card, .post, .post-preview, .related-post-card, pre, code, table, th, td, .footer, footer, blockquote, hr, .jumbotron {
   transition: background 0.3s, color 0.3s, border-color 0.3s;
 }
+
+[data-theme="dark"] {
+  --bg-color: #181a1b;
+  --text-main: #e0e0e0;
+  --text-muted: #aaaaaa;
+  --link-color: #52aeff;
+  --border-color: #333333;
+  --code-bg: #23272e;
+  --blockquote-border: #444444;
+  --navbar-bg: #23272e;
+  --navbar-text: #e0e0e0;
+  --card-bg: #23272e;
+  --card-border: rgba(255,255,255,0.08);
+  --footer-bg: #23272e;
+  --footer-text: #e0e0e0;
+}
