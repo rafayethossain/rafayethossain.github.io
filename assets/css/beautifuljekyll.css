@@ -22,6 +22,36 @@ layout: null
   --body-font: 'Lora', 'Times New Roman', serif;
   --header-font: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --mid-col: #808080;
+
+  /* light theme variables */
+  --bg-color: #ffffff;
+  --text-main: #222222;
+  --text-muted: #888888;
+  --link-color: #008AFF;
+  --border-color: #e0e0e0;
+  --code-bg: #f8f9fa;
+  --blockquote-border: #cccccc;
+  --navbar-bg: #f8f9fa;
+  --navbar-text: #222222;
+  --card-bg: #ffffff;
+  --card-border: rgba(0,0,0,0.08);
+  --footer-bg: #f8f9fa;
+  --footer-text: #222222;
+
+  /* dark theme variables */
+  --bg-color-dark: #181a1b;
+  --text-main-dark: #e0e0e0;
+  --text-muted-dark: #aaaaaa;
+  --link-color-dark: #52aeff;
+  --border-color-dark: #333333;
+  --code-bg-dark: #23272e;
+  --blockquote-border-dark: #444444;
+  --navbar-bg-dark: #23272e;
+  --navbar-text-dark: #e0e0e0;
+  --card-bg-dark: #23272e;
+  --card-border-dark: rgba(255,255,255,0.08);
+  --footer-bg-dark: #23272e;
+  --footer-text-dark: #e0e0e0;
 }
 
 /* --- General --- */
@@ -33,9 +63,10 @@ html {
 body {
   font-family: var(--body-font);
   font-size: 1.125rem;
-  color: var(--text-col);
+  color: var(--text-main);
+  background: var(--bg-color);
+  transition: background 0.3s, color 0.3s;
   position: relative;
-  background-color: var(--page-col);
   {% if site.page-img %}
   background-image: url({{ site.page-img | relative_url }});
   background-attachment: fixed;
@@ -73,28 +104,30 @@ h1, h2, h3, h4 {
   margin-top: 1.25rem;
 }
 a {
-  color: var(--link-col);
+  color: var(--link-color);
+  transition: color 0.3s;
 }
 a:hover,
 a:focus {
   color: var(--hover-col);
 }
 blockquote {
-  color: var(--mid-col);
-  font-style: italic;
+  color: var(--text-muted);
+  border-left: 4px solid var(--blockquote-border);
+  background: none;
+  transition: color 0.3s, border-color 0.3s;
 }
 blockquote p:first-child {
   margin-top: 0;
 }
 .jumbotron {
-  background: #EEE;
+  background: var(--card-bg);
+  color: var(--text-main);
+  transition: background 0.3s, color 0.3s;
 }
 hr.small {
-  max-width: 6.25rem;
-  margin: 1rem auto;
-  border-width: 0.25rem;
-  border-color: inherit;
-  border-radius: 0.1875rem;
+  border-color: var(--border-color);
+  transition: border-color 0.3s;
 }
 
 /* fix in-page anchors to not be behind fixed header */
@@ -727,7 +760,7 @@ nav.top-nav-short-permanent ~ header > .intro-header.big-img {
   font-weight: 300;
   margin: 0.625rem 0 0;
 }
-.intro-header .post-heading .post-subheading {
+.intro-header .post-heading .post-subtitle {
   margin-bottom: 1.25rem;
 }
 .intro-header.big-img .page-heading .page-subheading,
@@ -836,6 +869,10 @@ table {
   padding: 0;
   overflow-x: auto;
   display: block;
+  background: var(--card-bg);
+  color: var(--text-main);
+  border-color: var(--border-color);
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
 }
 table tr {
   border-top: 1px solid #cccccc;
@@ -1123,4 +1160,47 @@ pre {
   #nav-search-text {
     display: inline-block;
   }
+}
+
+/* Updated styles for dark mode compatibility */
+.navbar, .navbar-custom {
+  background: var(--navbar-bg) !important;
+  color: var(--navbar-text) !important;
+  border-bottom: 1px solid var(--border-color);
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.card, .post, .post-preview, .related-post-card {
+  background: var(--card-bg);
+  color: var(--text-main);
+  border-color: var(--card-border);
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+pre, code {
+  background: var(--code-bg);
+  color: var(--text-main);
+  transition: background 0.3s, color 0.3s;
+}
+
+table {
+  background: var(--card-bg);
+  color: var(--text-main);
+  border-color: var(--border-color);
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+th, td {
+  border-color: var(--border-color);
+}
+
+.footer, footer {
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  border-top: 1px solid var(--border-color);
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+html, body, .navbar, .card, .post, .post-preview, .related-post-card, pre, code, table, th, td, .footer, footer, blockquote, hr, .jumbotron {
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
 }
