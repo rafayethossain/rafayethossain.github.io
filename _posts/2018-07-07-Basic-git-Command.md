@@ -132,10 +132,4 @@ Git is a must-have tool for every developer. Start using these commands in your 
 Happy coding—and may your commits always be clean!
 
 ---
-
-{% include buymeacoffee.html %}
-
-{% include about-creator.html %}
-
-{: .box-success}
-Enjoy! Keep learning and coding.
+{% include blog-footer.html %}

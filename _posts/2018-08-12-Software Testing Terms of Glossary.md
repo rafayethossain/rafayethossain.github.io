@@ -180,7 +180,7 @@ MTBF = Total Uptime / Number of Failures
 
 > 🔍 **Want the full checklist?** → [Download my QA Terminology Playbook](your-link-here) (free PDF)
 
-**[⬆ Back to top](#)**
+
 
 ---
 

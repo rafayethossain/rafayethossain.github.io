@@ -142,9 +142,6 @@ The projects that succeed in today's business environment aren't the ones with t
 
 
 
-**[⬆ back to top](#the-role-of-data-analysis-in-project-management)**
-
-
 {% include blog-footer.html %}
 
 ![Diary](/assets/img/diary.png "Diary")

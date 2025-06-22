@@ -80,8 +80,6 @@ _Qucik Link to Specific Topic:_
     - [Success](#success)
     - [Warning](#warning)
     - [Error](#error)
-  - [Hello Again !](#hello-again-)
-- [About Content Creator:](#about-content-creator)
 
 ---
 
@@ -1300,15 +1298,8 @@ You can add notification, warning and error boxes like this:
 {: .box-error}
 **Error:** This is an error box.
 
-## Hello Again !
-{: .box-note}
 
-Enjoy !!!
-**See Yaaa, Next.**
 
-{% include buymeacoffee.html %}
-
-{% include about-creator.html %}
-
+{% include blog-footer.html %}
 
 
