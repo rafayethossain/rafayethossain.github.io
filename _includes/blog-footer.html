@@ -2,33 +2,49 @@
   .blog-footer-panel {
     max-width: 800px;
     margin: 3rem auto 2rem auto;
-    background: var(--page-col, #fff);
+    background: var(--color-surface);
     border-radius: 1.5rem;
-    box-shadow: 0 6px 32px rgba(0, 0, 0, 0.09);
+    box-shadow: 0 6px 32px rgba(30, 41, 59, 0.09);
     padding: 2.2rem 1.5rem 1.5rem 1.5rem;
     font-family: var(--body-font, "Lora", "Times New Roman", serif);
     display: flex;
     flex-direction: column;
     gap: 2.2rem;
     align-items: stretch;
+    color: var(--color-text-main);
+    transition: background 0.3s, color 0.3s;
   }
   .blog-footer-divider {
     height: 1px;
     background: linear-gradient(
       90deg,
-      #eee 0%,
-      var(--hover-col, #003366) 50%,
-      #eee 100%
+      var(--color-border, #eee) 0%,
+      var(--color-link, #2563eb) 50%,
+      var(--color-border, #eee) 100%
     );
     border: none;
     margin: 0.5rem 0 0.5rem 0;
     opacity: 0.5;
+    transition: background 0.3s;
   }
   @media (max-width: 600px) {
     .blog-footer-panel {
       padding: 1.2rem 0.5rem;
       gap: 1.2rem;
     }
+  }
+  [data-theme="dark"] .blog-footer-panel {
+    background: var(--color-surface);
+    color: var(--color-text-main);
+    box-shadow: 0 6px 32px rgba(16, 185, 129, 0.1);
+  }
+  [data-theme="dark"] .blog-footer-divider {
+    background: linear-gradient(
+      90deg,
+      var(--color-border, #2d323b) 0%,
+      var(--color-link, #60a5fa) 50%,
+      var(--color-border, #2d323b) 100%
+    );
   }
 </style>
 
