@@ -1208,8 +1208,8 @@ html, body, .navbar, .card, .post, .post-preview, .related-post-card, pre, code,
 [data-theme="dark"] {
   --bg-color: #181a1b;
   --text-main: #e0e0e0;
-  --text-muted: #aaaaaa;
-  --link-color: #52aeff;
+  --text-muted: #b0b0b0;
+  --link-color: #7dc3ff;
   --border-color: #333333;
   --code-bg: #23272e;
   --blockquote-border: #444444;
@@ -1219,4 +1219,80 @@ html, body, .navbar, .card, .post, .post-preview, .related-post-card, pre, code,
   --card-border: rgba(255,255,255,0.08);
   --footer-bg: #23272e;
   --footer-text: #e0e0e0;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: 1.125rem;
+  color: var(--text-main);
+  background: var(--bg-color);
+  letter-spacing: 0.01em;
+  line-height: 1.7;
+}
+
+[data-theme="dark"] body {
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.8;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-main);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+[data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3, [data-theme="dark"] h4, [data-theme="dark"] h5, [data-theme="dark"] h6 {
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+p, li, td, th, blockquote {
+  color: var(--text-main);
+}
+
+[data-theme="dark"] p, [data-theme="dark"] li, [data-theme="dark"] td, [data-theme="dark"] th, [data-theme="dark"] blockquote {
+  color: var(--text-main);
+}
+
+#darkModeToggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  background: var(--navbar-bg, #23272e);
+  color: var(--navbar-text, #e0e0e0);
+  border: 1.5px solid var(--border-color, #333);
+  border-radius: 2em;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.35em 1.2em;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: background 0.2s, color 0.2s, border 0.2s, box-shadow 0.2s;
+}
+#darkModeToggle:hover, #darkModeToggle:focus {
+  background: var(--link-color, #7dc3ff);
+  color: #fff;
+  border-color: var(--link-color, #7dc3ff);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  outline: none;
+}
+#darkModeToggle[aria-pressed="true"] {
+  background: var(--link-color, #7dc3ff);
+  color: #fff;
+  border-color: var(--link-color, #7dc3ff);
+}
+#darkModeIcon {
+  font-size: 1.3em;
+  margin-right: 0.2em;
+}
+#darkModeToggle .dark-mode-label {
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  user-select: none;
 }

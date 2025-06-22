@@ -1,6 +1,7 @@
 (function() {
   const themeToggle = document.getElementById('darkModeToggle');
   const themeIcon = document.getElementById('darkModeIcon');
+  const themeLabel = themeToggle ? themeToggle.querySelector('.dark-mode-label') : null;
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
   const savedTheme = localStorage.getItem('theme');
 
@@ -8,6 +9,7 @@
     document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
     if (themeToggle) themeToggle.setAttribute('aria-pressed', isDark);
     if (themeIcon) themeIcon.innerText = isDark ? '☀️' : '🌙';
+    if (themeLabel) themeLabel.textContent = isDark ? 'Light Mode' : 'Dark Mode';
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
   }
 
