@@ -1160,7 +1160,31 @@ pre {
   }
 }
 
-/* --- Buttons --- */
+/* --- Minimal Navbar & Link Hover --- */
+.navbar .nav-link, .navbar .dropdown-item {
+  color: var(--color-navbar-text);
+  background: none;
+  border-radius: 0.3em;
+  transition: color 0.2s, background 0.2s, text-decoration 0.2s;
+}
+.navbar .nav-link:hover, .navbar .nav-link:focus,
+.navbar .dropdown-item:hover, .navbar .dropdown-item:focus {
+  color: var(--color-link);
+  background: rgba(37,99,235,0.07);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  box-shadow: none;
+}
+[data-theme="dark"] .navbar .nav-link:hover, [data-theme="dark"] .navbar .nav-link:focus,
+[data-theme="dark"] .navbar .dropdown-item:hover, [data-theme="dark"] .navbar .dropdown-item:focus {
+  color: var(--color-link);
+  background: rgba(96,165,250,0.10);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  box-shadow: none;
+}
+
+/* --- Minimal Button Hover --- */
 .btn, button, input[type="button"], input[type="submit"] {
   background: var(--color-accent);
   color: #fff;
@@ -1178,24 +1202,30 @@ pre {
 .btn:hover, .btn:focus, button:hover, button:focus,
 input[type="button"]:hover, input[type="button"]:focus,
 input[type="submit"]:hover, input[type="submit"]:focus {
-  background: var(--color-link);
-  color: #fff;
-  box-shadow: 0 4px 16px rgba(37,99,235,0.12);
-  outline: 2px solid var(--color-link-hover);
+  background: var(--color-surface-alt);
+  color: var(--color-link);
+  box-shadow: 0 2px 8px rgba(37,99,235,0.08);
+  outline: 2px solid var(--color-link);
   outline-offset: 2px;
 }
-.btn:active, button:active, input[type="button"]:active, input[type="submit"]:active {
-  background: var(--color-link-hover);
-  color: #fff;
-}
-.btn:disabled, button:disabled, input[type="button"]:disabled, input[type="submit"]:disabled {
-  background: var(--color-border);
-  color: var(--color-text-muted);
-  cursor: not-allowed;
-  opacity: 0.7;
+[data-theme="dark"] .btn:hover, [data-theme="dark"] .btn:focus,
+[data-theme="dark"] button:hover, [data-theme="dark"] button:focus,
+[data-theme="dark"] input[type="button"]:hover, [data-theme="dark"] input[type="button"]:focus,
+[data-theme="dark"] input[type="submit"]:hover, [data-theme="dark"] input[type="submit"]:focus {
+  background: var(--color-surface-alt);
+  color: var(--color-link);
+  box-shadow: 0 2px 8px rgba(96,165,250,0.10);
+  outline: 2px solid var(--color-link);
+  outline-offset: 2px;
 }
 
-/* --- Links --- */
+/* --- Minimal Card Hover --- */
+.card:hover, .post-preview:hover, .related-post-card:hover {
+  box-shadow: 0 4px 16px rgba(37,99,235,0.07);
+  transform: translateY(-1px) scale(1.01);
+}
+
+/* --- Minimal Link Hover --- */
 a, a:visited {
   color: var(--color-link);
   text-decoration: underline;
@@ -1204,7 +1234,7 @@ a, a:visited {
 }
 a:hover, a:focus {
   color: var(--color-link-hover);
-  background: var(--color-surface-alt);
+  background: none;
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-decoration-color: var(--color-link-hover);
@@ -1291,4 +1321,37 @@ html, body, .navbar, .card, .post, .post-preview, .related-post-card, pre, code,
     transform: none !important;
     box-shadow: var(--color-shadow);
   }
+}
+
+/* --- Footer & Social Icons --- */
+footer .fa-stack, .footer .fa-stack, .blog-footer-panel .fa-stack {
+  vertical-align: middle;
+  margin: 0 0.25em;
+  font-size: 1.4em;
+}
+footer .fa-circle, .footer .fa-circle, .blog-footer-panel .fa-circle {
+  color: var(--color-surface-alt);
+  transition: color 0.2s;
+}
+footer .fa-stack-1x, .footer .fa-stack-1x, .blog-footer-panel .fa-stack-1x {
+  color: var(--color-link);
+  transition: color 0.2s;
+}
+footer .fa-stack:hover .fa-circle, .footer .fa-stack:hover .fa-circle, .blog-footer-panel .fa-stack:hover .fa-circle {
+  color: var(--color-link);
+}
+footer .fa-stack:hover .fa-stack-1x, .footer .fa-stack:hover .fa-stack-1x, .blog-footer-panel .fa-stack:hover .fa-stack-1x {
+  color: #fff;
+}
+[data-theme="dark"] footer .fa-circle, [data-theme="dark"] .footer .fa-circle, [data-theme="dark"] .blog-footer-panel .fa-circle {
+  color: #23272e;
+}
+[data-theme="dark"] footer .fa-stack-1x, [data-theme="dark"] .footer .fa-stack-1x, [data-theme="dark"] .blog-footer-panel .fa-stack-1x {
+  color: var(--color-link);
+}
+[data-theme="dark"] footer .fa-stack:hover .fa-circle, [data-theme="dark"] .footer .fa-stack:hover .fa-circle, [data-theme="dark"] .blog-footer-panel .fa-stack:hover .fa-circle {
+  color: var(--color-link);
+}
+[data-theme="dark"] footer .fa-stack:hover .fa-stack-1x, [data-theme="dark"] .footer .fa-stack:hover .fa-stack-1x, [data-theme="dark"] .blog-footer-panel .fa-stack:hover .fa-stack-1x {
+  color: #181a1b;
 }
