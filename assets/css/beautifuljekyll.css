@@ -1442,3 +1442,11 @@ table, th, td {
   color: #e5e7eb;
   border: 1.5px solid #2d323b;
 }
+
+/* Enable text selection for all elements */
+html, body, main, article, section, div, p, span, h1, h2, h3, h4, h5, h6, pre, code, blockquote, li, td, th {
+  user-select: text !important;
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+}

@@ -29,7 +29,7 @@ layout: page
       {% if thumbnail != "" %}
       <div class="post-image post-image-normal">
         <a href="{{ post.url | absolute_url }}" aria-label="View post: {{ post.title | strip_html }}">
-          <img src="{{ thumbnail | absolute_url }}" alt="{% if post.thumbnail-alt %}{{ post.thumbnail-alt }}{% else %}Thumbnail for {{ post.title | strip_html }}{% endif %}">
+          <img src="{{ thumbnail | absolute_url }}" alt="{% if post.thumbnail-alt %}{{ post.thumbnail-alt }}{% else %}Thumbnail for {{ post.title | strip_html }}{% endif %}" loading="lazy">
         </a>
       </div>
       {% endif %}
