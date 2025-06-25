@@ -29,27 +29,29 @@ layout: null
 }
 
 [data-theme="dark"] {
-  /* Dark theme */
+  /* Dark theme - improved for professionalism and aesthetics */
   --color-bg: #181a1b;
-  --color-surface: #23272e;
-  --color-surface-alt: #22242a;
-  --color-border: #2d323b;
-  --color-text-main: #e5e7eb;
-  --color-text-muted: #a1a1aa;
+  --color-surface: #20232a;
+  --color-surface-alt: #23272e;
+  --color-border: #262a31;
+  --color-text-main: #e6e8ea;
+  --color-text-muted: #a3a7b3;
   --color-heading: #fff;
-  --color-link: #60a5fa;
-  --color-link-hover: #3b82f6;
-  --color-accent: #34d399;
+  --color-link: #7dd3fc; /* cyan-300 */
+  --color-link-hover: #38bdf8; /* cyan-400 */
+  --color-accent: #34d399; /* emerald-400 */
   --color-danger: #f87171;
   --color-warning: #fbbf24;
   --color-success: #4ade80;
-  --color-shadow: 0 2px 8px rgba(16,185,129,0.10);
-  --color-navbar-bg: #23272e;
-  --color-navbar-text: #e5e7eb;
-  --color-footer-bg: #23272e;
-  --color-footer-text: #a1a1aa;
-  --color-code-bg: #23272e;
-  --color-blockquote-border: #60a5fa;
+  --color-shadow: 0 2px 8px rgba(125,211,252,0.10);
+  --color-navbar-bg: #20232a;
+  --color-navbar-text: #e6e8ea;
+  --color-footer-bg: #20232a;
+  --color-footer-text: #a3a7b3;
+  --color-code-bg: #181c20;
+  --color-blockquote-border: #7dd3fc;
+  --color-footer-link: #7dd3fc;
+  --color-footer-hover: #38bdf8;
 }
 
 /* --- General --- */
@@ -1409,7 +1411,7 @@ pre {
 }
 [data-theme="dark"] pre, [data-theme="dark"] code {
   background: #181c20 !important;
-  color: #e5e7eb !important;
+  color: #e6e8ea !important;
   border: 1px solid #23272e;
 }
 [data-theme="dark"] pre {
@@ -1428,7 +1430,7 @@ blockquote {
 [data-theme="dark"] blockquote {
   background: #20232a;
   color: #b0b0b0;
-  border-left: 4px solid #60a5fa;
+  border-left: 4px solid #7dd3fc;
 }
 
 /* --- Table readability --- */
@@ -1439,8 +1441,8 @@ table, th, td {
 }
 [data-theme="dark"] table, [data-theme="dark"] th, [data-theme="dark"] td {
   background: #23272e;
-  color: #e5e7eb;
-  border: 1.5px solid #2d323b;
+  color: #e6e8ea;
+  border: 1.5px solid #262a31;
 }
 
 /* Enable text selection for all elements */
