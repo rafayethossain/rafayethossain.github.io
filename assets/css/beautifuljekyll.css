@@ -1502,3 +1502,11 @@ input[type="button"]:focus:not(:focus-visible), input[type="submit"]:focus:not(:
 
 /* Remove redundant link hover underline/outlines from previous blocks */
 /* (This block should be placed after all other link/button hover/focus styles for override) */
+
+/* --- Dark mode: golden/yellowish hover for links and buttons --- */
+[data-theme="dark"] a:hover, [data-theme="dark"] a:focus, [data-theme="dark"] a:active,
+[data-theme="dark"] .btn:hover, [data-theme="dark"] .btn:focus, [data-theme="dark"] button:hover, [data-theme="dark"] button:focus,
+[data-theme="dark"] .nav-link:hover, [data-theme="dark"] .dropdown-item:hover {
+  color: #ffd700 !important; /* Gold */
+  text-decoration: none;
+}
