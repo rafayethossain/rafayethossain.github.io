@@ -8,16 +8,16 @@ subtitle: The Ultimate Free eBooks Library for Developers & Testers
 .books-modern {
   max-width: 900px;
   margin: 2.5rem auto 2rem auto;
-  background: var(--page-col, #fff);
+  background: var(--background-primary);
   border-radius: 1.2rem;
   box-shadow: 0 4px 32px rgba(0,0,0,0.07);
   padding: 2.5rem 2rem 2rem 2rem;
-  font-family: var(--body-font, 'Lora', 'Times New Roman', serif);
+  font-family: var(--font-family-primary);
 }
 .books-modern h1, .books-modern h2, .books-modern h3 {
-  font-family: var(--header-font, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif);
+  font-family: var(--font-family-primary);
   font-weight: 800;
-  color: var(--link-col, #0056B3);
+  color: var(--text-primary);
   margin-top: 2.2rem;
 }
 .books-modern h1 {
@@ -44,7 +44,7 @@ subtitle: The Ultimate Free eBooks Library for Developers & Testers
   margin-bottom: 0.7rem;
 }
 .books-modern .section-desc {
-  color: var(--mid-col, #555555);
+  color: var(--text-secondary);
   text-align: center;
   margin-bottom: 2rem;
   font-size: 1.1rem;

@@ -7,17 +7,17 @@ title: 'Tag Index'
 .tags-modern {
   max-width: 950px;
   margin: 2.5rem auto 2rem auto;
-  background: var(--page-col, #fff);
+  background: var(--background-primary);
   border-radius: 1.2rem;
   box-shadow: 0 4px 32px rgba(0,0,0,0.07);
   padding: 2.5rem 2rem 2rem 2rem;
-  font-family: var(--body-font, 'Lora', 'Times New Roman', serif);
+  font-family: var(--font-family-primary);
 }
 .tags-modern h1 {
-  font-family: var(--header-font, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif);
+  font-family: var(--font-family-primary);
   font-size: 2.2rem;
   font-weight: 900;
-  color: var(--link-col, #0056B3);
+  color: var(--text-primary);
   text-align: center;
   margin-bottom: 2.2rem;
 }
@@ -30,37 +30,37 @@ title: 'Tag Index'
 }
 .tags-modern .tag-btn {
   display: inline-block;
-  background: var(--navbar-col, #F8F9FA);
-  color: var(--link-col, #0056B3);
+  background: var(--neutral-200);
+  color: var(--text-primary);
   border-radius: 1.2rem;
   padding: 0.5rem 1.3rem;
   font-weight: 700;
   font-size: 1.05rem;
   text-decoration: none;
   box-shadow: 0 1px 6px rgba(0,0,0,0.04);
-  transition: background 0.2s, color 0.2s;
+  transition: all var(--transition-normal);
   border: none;
 }
 .tags-modern .tag-btn:hover {
-  background: var(--hover-col, #003366);
-  color: #fff;
+  background: var(--primary-100);
+  color: var(--neutral-100);
 }
 .tags-modern .tag-section {
   margin-bottom: 2.5rem;
 }
 .tags-modern h2 {
   font-size: 1.3rem;
-  color: var(--link-col, #0056B3);
+  color: var(--text-primary);
   margin-top: 2.2rem;
   margin-bottom: 1.1rem;
-  font-family: var(--header-font, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif);
+  font-family: var(--font-family-primary);
   font-weight: 800;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 .tags-modern h2 .fa-tag {
-  color: var(--hover-col, #003366);
+  color: var(--primary-100);
   font-size: 1.1em;
 }
 .tags-modern .post-list {
@@ -70,7 +70,7 @@ title: 'Tag Index'
   margin-bottom: 1.5rem;
 }
 .tags-modern .tag-entry {
-  background: #f8f8f8;
+  background: var(--neutral-200);
   border-radius: 0.7rem;
   padding: 1rem 1.1rem 0.7rem 1.1rem;
   box-shadow: 0 1px 6px rgba(0,0,0,0.03);
@@ -78,20 +78,25 @@ title: 'Tag Index'
   display: flex;
   flex-direction: column;
   min-height: 70px;
+  transition: all var(--transition-normal);
+}
+.tags-modern .tag-entry:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 .tags-modern .tag-entry a {
-  color: var(--link-col, #0056B3);
+  color: var(--link-color);
   font-weight: 700;
   font-size: 1.08rem;
   text-decoration: none;
   margin-bottom: 0.3rem;
-  transition: color 0.2s;
+  transition: color var(--transition-fast);
 }
 .tags-modern .tag-entry a:hover {
-  color: var(--hover-col, #003366);
+  color: var(--link-hover-color);
 }
 .tags-modern .entry-date {
-  color: var(--mid-col, #555555);
+  color: var(--text-secondary);
   font-size: 0.98em;
   margin-top: 0.1rem;
 }

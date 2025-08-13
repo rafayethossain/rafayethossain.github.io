@@ -8,11 +8,11 @@ permalink: /aboutme
 .aboutme-modern {
   max-width: 700px;
   margin: 2.5rem auto 2rem auto;
-  background: var(--page-col, #fff);
+  background: var(--background-primary);
   border-radius: 1.2rem;
   box-shadow: 0 4px 32px rgba(0,0,0,0.07);
   padding: 2.5rem 2rem 2rem 2rem;
-  font-family: var(--body-font, 'Lora', 'Times New Roman', serif);
+  font-family: var(--font-family-primary);
 }
 .aboutme-modern .avatar {
   text-align: center;
@@ -28,24 +28,24 @@ permalink: /aboutme
   border: 2px solid #e0e7ef;
 }
 .aboutme-modern h1 {
-  font-family: var(--header-font, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif);
+  font-family: var(--font-family-primary);
   font-size: 2.2rem;
   font-weight: 900;
-  color: var(--link-col, #0056B3);
+  color: var(--text-primary);
   text-align: center;
   margin-bottom: 0.3rem;
 }
 .aboutme-modern .subtitle {
   text-align: center;
-  color: var(--link-col, #008AFF);
+  color: var(--primary-100);
   font-size: 1.15em;
   font-weight: 600;
   margin-bottom: 0.7em;
 }
 .aboutme-modern blockquote {
-  border-left: 4px solid var(--hover-col, #003366);
-  background: #f8f8f8;
-  color: #555;
+  border-left: 4px solid var(--primary-100);
+  background: var(--neutral-200);
+  color: var(--text-primary);
   font-size: 1.1rem;
   margin: 1.5rem 0;
   padding: 1rem 1.5rem;
