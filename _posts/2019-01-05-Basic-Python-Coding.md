@@ -1,13 +1,22 @@
 ---
 layout: post
-title: Python Basic Code for Newbie
-subtitle: Software Test Automation with Selenium & Python
-tags: [software testing, test automation, python]
-image: /assets/img/diary.png
-bigimg: /assets/img/back.gif
+title: "Python Fundamentals: A Beginner's Guide to Basic Python Coding"
+subtitle: "Learn the Core Concepts of Python Programming, Including Variables, Data Types, Operators, and More, to Kickstart Your Coding Journey."
+date: 2019-01-05
+author: "Rafayet Hossain"
+description: "A beginner's guide to basic Python coding. Learn the fundamentals of Python programming, including variables, data types, operators, comments, and input/output."
+tags: [Python, Python for Beginners, Basic Python, Python Programming, Python Tutorial, Coding for Beginners, Variables, Data Types, Operators, Comments, Input, Output]
+categories: [Python, Development]
+cover-img: /assets/img/selenium-with-python.png
 thumbnail-img: /assets/img/selenium-with-python.png
 share-img: /assets/img/selenium-with-python.png
-cover-img: /assets/img/cover.jpg
+image: /assets/img/selenium-with-python.png
+bigimg: /assets/img/back.gif
+permalink: /basic-python-coding/
+canonical_url: https://rafayethossain.github.io/basic-python-coding/
+meta_keywords: "basic python coding, python fundamentals, python for beginners, python tutorial, python variables, python data types, python operators"
+toc: true
+toc_float: true
 ---
 
 Welcome back! I'm going to share with you some really basic Python code for beginners.
@@ -157,8 +166,5 @@ _But here sharing some source code for better practices_
 
 {% include blog-footer.html %}
 
-{: .box-success}
-Enjoy !!!
-**See Yaaa, Next.**
 
 ![Selenium with Python](/assets/img/selenium-with-python.png "Selenium with Python")

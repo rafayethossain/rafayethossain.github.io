@@ -1,16 +1,22 @@
 ---
 layout: post
-title: "How to Install Selenium Python WebDriver: Complete 2025 Setup Guide"
-subtitle: From Zero to Web Automation Hero in Just 15 Minutes
-tags:
-  [
-    software testing, test automation, python
-  ]
-image: /img/selenium-with-python.png
-bigimg: /img/back.gif
+title: "How to Install Selenium Python WebDriver: The Ultimate 2025 Setup Guide"
+subtitle: "From Zero to Web Automation Hero in Just 15 Minutes: A Step-by-Step Guide to Setting Up Selenium with Python for Automated Testing"
+date: 2019-01-08
+author: "Rafayet Hossain"
+description: "A comprehensive 2025 guide on how to install Selenium Python WebDriver. Learn step-by-step to set up your environment for automated web testing, including Python, Selenium bindings, and WebDriver Manager."
+tags: [Selenium, Python, WebDriver, Test Automation, Web Automation, Automated Testing, Selenium Python, Installation Guide, QA, Software Testing]
+categories: [Software Testing, Test Automation]
+cover-img: /assets/img/selenium-with-python.png
 thumbnail-img: /assets/img/selenium-with-python.png
-share-img: /img/selenium-with-python.png
-cover-img: /assets/img/cover.jpg
+share-img: /assets/img/selenium-with-python.png
+image: /assets/img/selenium-with-python.png
+bigimg: /assets/img/back.gif
+permalink: /how-to-install-selenium-python-webdriver/
+canonical_url: https://rafayethossain.github.io/how-to-install-selenium-python-webdriver/
+meta_keywords: "install selenium python, selenium webdriver setup, python web automation, automated testing python, selenium tutorial, qa automation, selenium 2025"
+toc: true
+toc_float: true
 ---
 
 Today, I'm sharing the exact step-by-step process that gets you from "What is Selenium?" to running your first automated web test—without the headaches.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Requirements Elicitation Compelete Guidelines
+title: Requirements Elicitation Complete Guidelines
 subtitle: Requirements Elicitation Techniques You Must Learn
 tags:
   [
@@ -15,7 +15,7 @@ share-img: /assets/img/diary.png
 cover-img: /assets/img/cover.jpg
 ---
 
-The requirement elicitation method involves studying and finding system needs from users, customers, and other stakeholders. In this comprehensive guide, you will introduce with the popular techniques like brainstorming, requirement workshops, interviews, surveys, observation, document review, and prototyping, highlighting their benefits and practical applications.
+Requirement elicitation involves studying and finding system needs from users, customers, and other stakeholders. This comprehensive guide introduces popular techniques like brainstorming, requirement workshops, interviews, surveys, observation, document review, and prototyping, highlighting their benefits and practical applications. ([What is Software Requirements](/what-is-software-requirements/))
 
 _Quick Links to Topic:_
 
@@ -519,7 +519,6 @@ Analyzing Interface Time:
 - Set self-imposed time limits
 - Create a glossary of terms from former project documentation
 
-**[⬆ back to top](#requirement-elicitation-basics)**
 
 ---
 
