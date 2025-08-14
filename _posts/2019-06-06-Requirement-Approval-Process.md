@@ -1,7 +1,9 @@
 ---
 layout: post
 title: "From Draft to Done: Mastering the Requirement Approval Process"
-subtitle: Master the Requirement Approval Process: A Step-by-Step Guide to Gaining Stakeholder Sign-Off for Project Success
+subtitle: "Master the Requirement Approval Process: A Step-by-Step Guide to Gaining Stakeholder Sign-Off for Project Success"
+date: 2019-06-06
+author: "Rafayet Hossain"
 tags:
   [
     requirement approval process,

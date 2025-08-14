@@ -1,7 +1,9 @@
 ---
 layout: post
 title: "A Developer's Guide to the Change Control Process in SDLC"
-subtitle: Master the Change Control Process in SDLC: A Developer's Guide to Managing Changes and Impact Analysis in Software Projects
+subtitle: "Master the Change Control Process in SDLC: A Developer's Guide to Managing Changes and Impact Analysis in Software Projects"
+date: 2019-07-07
+author: "Rafayet Hossain"
 tags:
   [
     change control process,

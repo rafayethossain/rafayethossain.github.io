@@ -1,14 +1,17 @@
 ---
 layout: post
 title: "Project Management Beginner's Guide: Your Essential Roadmap to Success"
-subtitle: Your Essential Roadmap to Success in Project Management: Key Concepts, Lifecycle Phases, and Essential Tools
+subtitle: "Your Essential Roadmap to Success in Project Management: Key Concepts, Lifecycle Phases, and Essential Tools"
 tags: [project management, project manager, project lifecycle, project planning, agile, waterfall]
+date: 2022-10-10
+author: "Rafayet Hossain"
 image: /assets/img/diary.png
 bigimg: /assets/img/back.gif
 thumbnail-img: /assets/img/diary.png
 share-img: /assets/img/diary.png
 cover-img: /assets/img/cover.jpg
 ---
+
 
 Embarking on a project management career is both exciting and challenging. As a **beginner project manager**, understanding fundamental concepts and processes is crucial for leading successful projects. This comprehensive **Project Management Beginner's Guide** equips you with the knowledge and tools needed to navigate project management, from initiation to closure.
 
