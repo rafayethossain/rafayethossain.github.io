@@ -8,7 +8,7 @@ description: "A comprehensive guide for Business Analysts on how to successfully
 tags: [business analyst to project manager, ba to pm transition, project management career path, business analyst skills for project management, project manager certifications]
 categories: [career, project management]
 cover-img: /assets/img/cover.jpg
-thumbnail-img: /assets/img/thumbnail.png
+thumbnail-img: /assets/img/diary.png
 share-img: /assets/img/share-image.png
 permalink: /business-analyst-to-project-manager-transition-guide/
 canonical_url: https://rafayethossain.github.io/business-analyst-to-project-manager-transition-guide/

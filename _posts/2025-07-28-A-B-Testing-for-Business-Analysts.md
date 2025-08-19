@@ -8,7 +8,7 @@ description: "Master A/B testing as a business analyst. This practical guide cov
 tags: [a/b testing, split testing, business analysis, data-driven decision making, conversion rate optimization]
 categories: [business analysis, project management]
 cover-img: /assets/img/cover.jpg
-thumbnail-img: /assets/img/thumbnail.png
+thumbnail-img: /assets/img/diary.png
 share-img: /assets/img/share-image.png
 permalink: /a-b-testing-for-business-analysts/
 canonical_url: https://rafayethossain.github.io/a-b-testing-for-business-analysts/

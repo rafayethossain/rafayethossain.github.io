@@ -8,7 +8,7 @@ description: "A comprehensive guide for Business Analysts to master Agile method
 tags: [business analysis, agile, scrum, kanban, agile requirements, user stories]
 categories: [business analysis, agile]
 cover-img: /assets/img/cover.jpg
-thumbnail-img: /assets/img/thumbnail.png
+thumbnail-img: /assets/img/diary.png
 share-img: /assets/img/share-image.png
 permalink: /the-business-analysts-guide-to-agile-methodologies/
 canonical_url: https://rafayethossain.github.io/the-business-analysts-guide-to-agile-methodologies/

@@ -8,7 +8,7 @@ description: "Your complete guide to transitioning from a QA role to a Business 
 tags: [qa to ba, career transition, business analysis, software testing, business analyst skills, career development]
 categories: [career, business analysis]
 cover-img: /assets/img/cover.jpg
-thumbnail-img: /assets/img/thumbnail.png
+thumbnail-img: /assets/img/diary.png
 share-img: /assets/img/share-image.png
 permalink: /qa-to-ba-transition-guide/
 canonical_url: https://rafayethossain.github.io/qa-to-ba-transition-guide/

@@ -8,7 +8,7 @@ description: "Master stakeholder management with our ultimate guide. Learn to id
 tags: [stakeholder management, stakeholder analysis, RACI matrix, project success, business analysis, project management]
 categories: [business analysis, project management]
 cover-img: /assets/img/cover.jpg
-thumbnail-img: /assets/img/thumbnail.png
+thumbnail-img: /assets/img/diary.png
 share-img: /assets/img/share-image.png
 permalink: /mastering-stakeholder-management-guide/
 canonical_url: https://rafayethossain.github.io/mastering-stakeholder-management-guide/

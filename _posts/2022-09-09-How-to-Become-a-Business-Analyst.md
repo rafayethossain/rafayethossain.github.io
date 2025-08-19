@@ -8,7 +8,7 @@ description: "Your complete guide on how to become a Business Analyst. Learn the
 tags: [how to become a business analyst, business analyst career, business analyst skills, business analyst certifications, entry level business analyst]
 categories: [career, business analysis]
 cover-img: /assets/img/cover.jpg
-thumbnail-img: /assets/img/thumbnail.png
+thumbnail-img: /assets/img/diary.png
 share-img: /assets/img/share-image.png
 permalink: /how-to-become-a-business-analyst-guide/
 canonical_url: https://rafayethossain.github.io/how-to-become-a-business-analyst-guide/

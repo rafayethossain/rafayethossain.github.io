@@ -8,7 +8,7 @@ description: "Explore the business analysis career path, including the latest tr
 tags: [business analysis, career path, business analyst salary, business analysis trends, business analyst skills, business analyst certifications]
 categories: [career, business analysis]
 cover-img: /assets/img/cover.jpg
-thumbnail-img: /assets/img/thumbnail.png
+thumbnail-img: /assets/img/diary.png
 share-img: /assets/img/share-image.png
 permalink: /business-analyst-career-path-guide/
 canonical_url: https://rafayethossain.github.io/business-analyst-career-path-guide/

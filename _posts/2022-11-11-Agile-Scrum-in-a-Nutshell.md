@@ -8,8 +8,8 @@ description: "A comprehensive guide to Agile Scrum for beginners. Learn the core
 tags: [agile, scrum, project management, scrum framework, scrum guide, scrum for beginners]
 categories: [agile, project management]
 cover-img: /assets/img/cover.jpg
-thumbnail-img: /assets/img/thumbnail.png
 share-img: /assets/img/share-image.png
+thumbnail-img: /assets/img/diary.png
 permalink: /agile-scrum-in-a-nutshell/
 canonical_url: https://rafayethossain.github.io/agile-scrum-in-a-nutshell/
 meta_keywords: "agile scrum, scrum framework, scrum guide, scrum for beginners, project management"

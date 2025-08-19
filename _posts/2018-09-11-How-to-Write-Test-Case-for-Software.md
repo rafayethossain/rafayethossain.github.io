@@ -8,7 +8,7 @@ description: "Learn how to write effective test cases with this comprehensive gu
 tags: [how to write test cases, effective test cases, test case writing guide, test case elements, test case design techniques, qa best practices]
 categories: [testing, software development]
 cover-img: /assets/img/cover.jpg
-thumbnail-img: /assets/img/thumbnail.png
+thumbnail-img: /assets/img/diary.png
 share-img: /assets/img/share-image.png
 permalink: /how-to-write-test-cases-guide/
 canonical_url: https://rafayethossain.github.io/how-to-write-test-cases-guide/

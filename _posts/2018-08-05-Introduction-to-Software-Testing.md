@@ -8,7 +8,7 @@ description: "A comprehensive guide to the fundamentals of software testing. Lea
 tags: [introduction to software testing, what is software testing, software testing basics, types of software testing, software testing life cycle, stlc, qa testing, quality assurance]
 categories: [testing, software development]
 cover-img: /assets/img/cover.jpg
-thumbnail-img: /assets/img/thumbnail.png
+thumbnail-img: /assets/img/diary.png
 share-img: /assets/img/share-image.png
 permalink: /introduction-to-software-testing-guide/
 canonical_url: https://rafayethossain.github.io/introduction-to-software-testing-guide/

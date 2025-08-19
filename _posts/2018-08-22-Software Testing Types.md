@@ -8,7 +8,7 @@ description: "Explore the essential types of software testing, including functio
 tags: [software testing types, functional testing, non-functional testing, unit testing, integration testing, system testing, acceptance testing, agile testing, waterfall testing]
 categories: [testing, software development]
 cover-img: /assets/img/cover.jpg
-thumbnail-img: /assets/img/thumbnail.png
+thumbnail-img: /assets/img/diary.png
 share-img: /assets/img/share-image.png
 permalink: /software-testing-types-guide/
 canonical_url: https://rafayethossain.github.io/software-testing-types-guide/

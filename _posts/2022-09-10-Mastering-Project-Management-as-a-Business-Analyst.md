@@ -8,7 +8,7 @@ description: "A comprehensive guide for Business Analysts on how to master proje
 tags: [project management for business analysts, business analyst project management skills, ba and pm collaboration, requirements management, stakeholder management]
 categories: [project management, business analysis]
 cover-img: /assets/img/cover.jpg
-thumbnail-img: /assets/img/thumbnail.png
+thumbnail-img: /assets/img/diary.png
 share-img: /assets/img/share-image.png
 permalink: /mastering-project-management-for-business-analysts/
 canonical_url: https://rafayethossain.github.io/mastering-project-management-for-business-analysts/
