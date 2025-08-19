@@ -2,10 +2,18 @@
 layout: post
 title: "Agile Scrum in a Nutshell: A Beginner's Guide"
 subtitle: "Your complete guide to the Scrum framework. Learn the roles, events, and artifacts to deliver projects successfully."
-date: 2025-08-05
+date: 2022-11-11
 author: "Rafayet Hossain"
 description: "A comprehensive guide to Agile Scrum for beginners. Learn the core concepts, roles, events, and artifacts of the Scrum framework to ensure your project's success."
-tags: [agile, scrum, project management, scrum framework, scrum guide, scrum for beginners]
+tags:
+  [
+    agile,
+    scrum,
+    project management,
+    scrum framework,
+    scrum guide,
+    scrum for beginners,
+  ]
 categories: [agile, project management]
 cover-img: /assets/img/cover.jpg
 share-img: /assets/img/share-image.png
@@ -19,19 +27,17 @@ If you're new to the world of project management, you've probably heard the term
 
 ## Key Takeaways
 
-*   **Agile is a mindset, Scrum is a framework:** Agile is a set of principles, while Scrum is a specific framework for implementing those principles.
-*   **Scrum is about iterative development:** Work is broken down into short cycles called Sprints, allowing for continuous feedback and improvement.
-*   **The Scrum Team has three key roles:** The Product Owner, the Scrum Master, and the Development Team.
-*   **There are five core Scrum events:** The Sprint, Sprint Planning, Daily Scrum, Sprint Review, and Sprint Retrospective.
-*   **Scrum uses three main artifacts:** The Product Backlog, the Sprint Backlog, and the Increment.
+- **Agile is a mindset, Scrum is a framework:** Agile is a set of principles, while Scrum is a specific framework for implementing those principles.
+- **Scrum is about iterative development:** Work is broken down into short cycles called Sprints, allowing for continuous feedback and improvement.
+- **The Scrum Team has three key roles:** The Product Owner, the Scrum Master, and the Development Team.
+- **There are five core Scrum events:** The Sprint, Sprint Planning, Daily Scrum, Sprint Review, and Sprint Retrospective.
+- **Scrum uses three main artifacts:** The Product Backlog, the Sprint Backlog, and the Increment.
 
 ---
-
 
 _Quick Link to Specific Topic:_
 
 - [What is Agile?](#what-is-agile)
-  - [Agile methodologies, like Scrum, are designed to be flexible and adaptive, allowing teams to respond quickly to changing requirements and market conditions.](#agile-methodologies-like-scrum-are-designed-to-be-flexible-and-adaptive-allowing-teams-to-respond-quickly-to-changing-requirements-and-market-conditions)
 - [What is Scrum?](#what-is-scrum)
 - [Main components of Scrum Framework](#main-components-of-scrum-framework)
   - [03 Scrum Roles and their responsibilites](#03-scrum-roles-and-their-responsibilites)
@@ -39,7 +45,7 @@ _Quick Link to Specific Topic:_
   - [Responsibilities of the Scrum Product Owner](#responsibilities-of-the-scrum-product-owner)
   - [Responsibilities of the Scrum Master](#responsibilities-of-the-scrum-master)
   - [Responsibilities of the Development team/ Scrum Team](#responsibilities-of-the-development-team-scrum-team)
-  - [05 Scrum Events](#05-scrum-events)
+- [05 Scrum Events](#05-scrum-events)
     - [WHAT-Meeting](#what-meeting)
     - [HOW-Meeting](#how-meeting)
     - [Rules \& Norms:](#rules--norms)
@@ -49,17 +55,17 @@ _Quick Link to Specific Topic:_
   - [Scrum User Stories](#scrum-user-stories)
   - [Distributed Scrum Teams](#distributed-scrum-teams)
 
-
 # What is Agile?
 
 **Agile** is a mindset and a set of principles for software development that values:
 
-*   **Individuals and interactions** over processes and tools.
-*   **Working software** over comprehensive documentation.
-*   **Customer collaboration** over contract negotiation.
-*   **Responding to change** over following a plan.
+- **Individuals and interactions** over processes and tools.
+- **Working software** over comprehensive documentation.
+- **Customer collaboration** over contract negotiation.
+- **Responding to change** over following a plan.
 
-Agile methodologies, like Scrum, are designed to be flexible and adaptive, allowing teams to respond quickly to changing requirements and market conditions. 
+Agile methodologies, like Scrum, are designed to be flexible and adaptive, allowing teams to respond quickly to changing requirements and market conditions.
+
 ---
 
 # What is Scrum?
@@ -72,8 +78,6 @@ Agile methodologies, like Scrum, are designed to be flexible and adaptive, allow
 
 ---
 
-
-
 # Main components of Scrum Framework
 
 The Scrum framework provides a structured approach to Agile project management. The Scrum framework consists of three roles, five events, and three artifacts.
@@ -81,15 +85,15 @@ The Scrum framework provides a structured approach to Agile project management. 
 ## 03 Scrum Roles and their responsibilites
 
 1. Product Owner:
-The Product Owner is responsible for defining and prioritizing the product backlog, ensuring that it reflects the needs of the customer and stakeholders.
+   The Product Owner is responsible for defining and prioritizing the product backlog, ensuring that it reflects the needs of the customer and stakeholders.
 
 2. Scrum Master:
-The Scrum Master is responsible for ensuring that the Scrum framework is implemented correctly and that the team is following the Agile principles and values.
+   The Scrum Master is responsible for ensuring that the Scrum framework is implemented correctly and that the team is following the Agile principles and values.
 
 3. Development Team:
-The Development Team is responsible for delivering a potentially shippable product increment at the end of each sprint.
+   The Development Team is responsible for delivering a potentially shippable product increment at the end of each sprint.
 
-**The Scrum Team:** 
+**The Scrum Team:**
 A collection of individuals working together to deliver requested and committed product increments. The ideal size is 7 +/- 2 people. The Scrum Team is empowered and self-organizing to define:
 
 - What is will commit to deliver at the end of the Sprint?
@@ -99,6 +103,8 @@ A collection of individuals working together to deliver requested and committed 
 - The skills within the Scrum Team are balanced.
 - team is small and has no sub-teams.
 - The people within the Scrum Team work full time in the team.
+
+---
 
 # Responsibility of Each Individuals in Scrum
 
@@ -126,21 +132,21 @@ A collection of individuals working together to deliver requested and committed 
 - To ensure that at the end of the Sprint potentially shippable functionality is delivered.
 - To update the status and the remaining efforts for their tasks to allow creation of a Sprint Burndown Diagram.
 
-## 05 Scrum Events
+---
+
+# 05 Scrum Events
 
 Scrum teams use five events: sprint, sprint planning, daily Scrum, sprint review, and sprint retrospective
 
 1. Sprint:
-A time-boxed iteration of development work that typically lasts 2-4 weeks.
+   A time-boxed iteration of development work that typically lasts 2-4 weeks.
 
 2. Sprint Planning:
-A meeting where the team plans the work that will be completed during the upcoming sprint.
+   A meeting where the team plans the work that will be completed during the upcoming sprint.
 
 - Sprint Planning Meeting includes WHAT-Meeting and HOW-Meeting.
 - WHAT-Meeting the Scrum Team commits to the User Stories from the Scrum Product Backlog and it uses a HOW-Meeting to break the committed User Stories into smaller and concrete tasks. Then implementation begins.
 - Iterative process: Stakeholder requirements > Update Product Backlog -> Sprint Planning Session -> Daily Sprint Meeting -> Sprint Review Session -> Potentially deliverable Product -> Release -> Sprint Retrospective
-
-
 
 ### WHAT-Meeting
 
@@ -171,7 +177,7 @@ A daily 15-minute meeting where the team members discuss progress and plan their
   - No issues or concerns raised during the meeting are allowed to be ignored due to the lack of time. Issues or concerns ought to be recorded by the Scrum Master and needs to be specifically handled after the meeting.
 
 4. Sprint Review:
-A meeting where the team presents the work completed during the sprint to the Product Owner and stakeholders.
+   A meeting where the team presents the work completed during the sprint to the Product Owner and stakeholders.
 
 - Take place in the form of a demo of the new features.
 - Backlog items that are not completed shall not be demonstrated.
@@ -180,7 +186,7 @@ A meeting where the team presents the work completed during the sprint to the Pr
 - Scrum Product Owner inspects the implemented backlog entries and accepts the solution or adds new stories to the Scrum Product Backlog to adapt the functionality.
 
 5. Sprint Retrospective:
-A meeting where the team reflects on the previous sprint and identifies areas for improvement.
+   A meeting where the team reflects on the previous sprint and identifies areas for improvement.
 
 - Time-boxed event.
 - An integral part of the “inspect and adapt” process.
@@ -195,12 +201,14 @@ A meeting where the team reflects on the previous sprint and identifies areas fo
 - The Definition Of Done (DoD) used to decide if work is finished or not.
 - Code guidelines.
 
+---
+
 # 03 Artifacts of Scrum
 
 Scrum teams use three artifacts: the product backlog, the sprint backlog, and the increment.
 
 1. Product Backlog:
-A prioritized list of features and requirements for the product.
+   A prioritized list of features and requirements for the product.
 
 - List of all things that needs to be done within the project.
 - Each entry in the Scrum Product Backlog must have some kind of customer value. Entries without any customer value are pure waste and should not be present anyway.
@@ -217,7 +225,7 @@ A prioritized list of features and requirements for the product.
 - about 10% of the Scrum Teams total time should be reserved for maintaining the Scrum Product Backlog.
 
 2. Sprint Backlog:
-A list of tasks that the Development Team plans to complete during the upcoming sprint.
+   A list of tasks that the Development Team plans to complete during the upcoming sprint.
 
 - All entries have to be estimated on a person-hour base in order to track progress and remaining efforts.
 - The Sprint Backlog is a living artifact and is updated on a daily base.
@@ -226,30 +234,29 @@ A list of tasks that the Development Team plans to complete during the upcoming 
 3. Increment:
    A potentially shippable product that has been developed during the sprint.
 
+---
 
 # How to Implement Scrum
 
 To implement Scrum, follow these steps:
 
 - Form a Scrum Team:
-Identify the Product Owner, Scrum Master, and Development Team.
+  Identify the Product Owner, Scrum Master, and Development Team.
 
 - Create the Product Backlog:
-The Product Owner works with stakeholders to identify and prioritize the features and requirements for the product.
+  The Product Owner works with stakeholders to identify and prioritize the features and requirements for the product.
 
 - Conduct Sprint Planning:
-The Development Team and Product Owner work together to select the features and requirements that will be completed during the upcoming sprint.
+  The Development Team and Product Owner work together to select the features and requirements that will be completed during the upcoming sprint.
 
 - Conduct Daily Scrums:
-The Development Team meets daily to discuss progress and plan work for the day.
+  The Development Team meets daily to discuss progress and plan work for the day.
 
 - Conduct Sprint Review:
-The Development Team presents the work completed during the sprint to the Product Owner and stakeholders.
+  The Development Team presents the work completed during the sprint to the Product Owner and stakeholders.
 
 - Conduct Sprint Retrospective:
- The team reflects on the previous sprint and identifies areas for improvement.
-
-
+  The team reflects on the previous sprint and identifies areas for improvement.
 
 # Examples of Scrum in Software Projects
 
@@ -299,8 +306,6 @@ Let's say you're working on a software project that involves developing a softwa
 - Feature Team — fully responsible for implementation on of user stories as contained in the Scrum Backlog.
 
 Scrum is a powerful framework for Agile project management that can help software teams deliver high-quality products in shorter timeframes. By focusing on transparency, inspection, and adaptation, and guided by the values of commitment, focus, openness, respect, and courage, Scrum enables teams to collaborate effectively, prioritize work, and deliver value to customers. By understanding the roles, artifacts, and events of Scrum, and how it can be applied in software projects, beginner project managers can begin to master the Scrum framework and deliver successful projects.
-
-
 
 {% include blog-footer.html %}
 
