@@ -2,7 +2,7 @@
 layout: post
 title: "A Beginner's Guide to Performance Testing"
 subtitle: "Ensuring Your Applications Are Fast, Stable, and Scalable"
-date: 2025-07-30
+date: 2018-10-06
 author: "Rafayet Hossain"
 description: "A comprehensive beginner's guide to performance testing. Learn what it is, why it's important, key metrics, types of tests, and best practices for ensuring application speed and stability."
 tags: [performance testing, load testing, stress testing, scalability testing, software testing, QA, web performance, application performance]
@@ -35,7 +35,6 @@ This beginner's guide will demystify performance testing, explaining its core co
 
 ---
 
-- [Introduction](#introduction)
 - [Key Takeaways](#key-takeaways)
 - [What is Performance Testing?](#what-is-performance-testing)
 - [Why is Performance Testing Important?](#why-is-performance-testing-important)
@@ -44,7 +43,7 @@ This beginner's guide will demystify performance testing, explaining its core co
 - [Performance Testing Process (Simplified)](#performance-testing-process-simplified)
 - [Popular Performance Testing Tools](#popular-performance-testing-tools)
 - [Best Practices for Beginners](#best-practices-for-beginners)
-- [Conclusion](#conclusion)
+  - [Conclusion](#conclusion)
 
 ---
 

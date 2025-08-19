@@ -2,7 +2,7 @@
 layout: post
 title: "How to Create a Test Plan That Covers All Your Bases"
 subtitle: "A Comprehensive Guide to Designing Effective Software Testing Strategies"
-date: 2025-07-30
+date: 2018-09-02
 author: "Rafayet Hossain"
 description: "Learn to create a robust software test plan that ensures comprehensive coverage. This guide covers key components, types of testing, and best practices for quality assurance."
 tags: [test plan, software testing, QA, quality assurance, test strategy, test management, software quality, testing best practices]
@@ -34,29 +34,28 @@ This guide will walk you through the essential components and steps involved in 
 
 ---
 
-- [Introduction](#introduction)
 - [Key Takeaways](#key-takeaways)
 - [What is a Test Plan?](#what-is-a-test-plan)
 - [Why is a Comprehensive Test Plan Important?](#why-is-a-comprehensive-test-plan-important)
 - [Key Components of a Test Plan](#key-components-of-a-test-plan)
-    - [1. Project Overview and Objectives](#1-project-overview-and-objectives)
-    - [2. Scope of Testing](#2-scope-of-testing)
-    - [3. Test Strategy and Approach](#3-test-strategy-and-approach)
-    - [4. Roles, Responsibilities, and Resources](#4-roles-responsibilities-and-resources)
-    - [5. Test Deliverables](#5-test-deliverables)
-    - [6. Schedule and Milestones](#6-schedule-and-milestones)
-    - [7. Risk Management](#7-risk-management)
-    - [8. Defect Management](#8-defect-management)
-    - [9. Approval and Review](#9-approval-and-review)
+  - [1. Project Overview and Objectives](#1-project-overview-and-objectives)
+  - [2. Scope of Testing](#2-scope-of-testing)
+  - [3. Test Strategy and Approach](#3-test-strategy-and-approach)
+  - [4. Roles, Responsibilities, and Resources](#4-roles-responsibilities-and-resources)
+  - [5. Test Deliverables](#5-test-deliverables)
+  - [6. Schedule and Milestones](#6-schedule-and-milestones)
+  - [7. Risk Management](#7-risk-management)
+  - [8. Defect Management](#8-defect-management)
+  - [9. Approval and Review](#9-approval-and-review)
 - [Key Considerations for "Covering All Your Bases"](#key-considerations-for-covering-all-your-bases)
-    - [Requirements Traceability](#requirements-traceability)
-    - [Risk-Based Testing](#risk-based-testing)
-    - [Negative Testing](#negative-testing)
-    - [Non-Functional Testing](#non-functional-testing)
-    - [Regression Strategy](#regression-strategy)
-    - [User Acceptance Testing (UAT)](#user-acceptance-testing-uat)
-    - [Contingency Planning](#contingency-planning)
-- [Conclusion](#conclusion)
+  - [Requirements Traceability](#requirements-traceability)
+  - [Risk-Based Testing](#risk-based-testing)
+  - [Negative Testing](#negative-testing)
+  - [Non-Functional Testing](#non-functional-testing)
+  - [Regression Strategy](#regression-strategy)
+  - [User Acceptance Testing (UAT)](#user-acceptance-testing-uat)
+  - [Contingency Planning](#contingency-planning)
+  - [Conclusion](#conclusion)
 
 ---
 

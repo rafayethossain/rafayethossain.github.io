@@ -2,7 +2,7 @@
 layout: post
 title: "A Comprehensive Guide to API Testing with Postman"
 subtitle: "Mastering API Validation for Robust Software Applications"
-date: 2025-07-30
+date: 2018-10-07
 author: "Rafayet Hossain"
 description: "Learn how to perform comprehensive API testing using Postman. This guide covers key features, step-by-step processes, and best practices for ensuring API functionality, reliability, and security."
 tags: [API testing, Postman, software testing, API automation, REST API, QA, API development, testing tools]
@@ -34,24 +34,23 @@ This comprehensive guide will walk you through the essentials of API testing, in
 
 ---
 
-- [Introduction](#introduction)
 - [Key Takeaways](#key-takeaways)
 - [What is API Testing?](#what-is-api-testing)
 - [Why is API Testing Important?](#why-is-api-testing-important)
 - [Introducing Postman](#introducing-postman)
 - [Key Steps and Features for API Testing with Postman](#key-steps-and-features-for-api-testing-with-postman)
-    - [1. Setting Up Postman](#1-setting-up-postman)
-    - [2. Making API Requests](#2-making-api-requests)
-    - [3. Understanding Responses](#3-understanding-responses)
-    - [4. Using Variables and Environments](#4-using-variables-and-environments)
-    - [5. Creating Collections and Folders](#5-creating-collections-and-folders)
-    - [6. Writing Tests (Assertions)](#6-writing-tests-assertions)
-    - [7. Running Collections (Collection Runner)](#7-running-collections-collection-runner)
-    - [8. Mock Servers (Brief Mention)](#8-mock-servers-brief-mention)
-    - [9. Monitoring (Brief Mention)](#9-monitoring-brief-mention)
-    - [10. Integration with CI/CD (Brief Mention)](#10-integration-with-cicd-brief-mention)
+  - [1. Setting Up Postman](#1-setting-up-postman)
+  - [2. Making API Requests](#2-making-api-requests)
+  - [3. Understanding Responses](#3-understanding-responses)
+  - [4. Using Variables and Environments](#4-using-variables-and-environments)
+  - [5. Creating Collections and Folders](#5-creating-collections-and-folders)
+  - [6. Writing Tests (Assertions)](#6-writing-tests-assertions)
+  - [7. Running Collections (Collection Runner)](#7-running-collections-collection-runner)
+  - [8. Mock Servers (Brief Mention)](#8-mock-servers-brief-mention)
+  - [9. Monitoring (Brief Mention)](#9-monitoring-brief-mention)
+  - [10. Integration with CI/CD (Brief Mention)](#10-integration-with-cicd-brief-mention)
 - [Best Practices for API Testing with Postman](#best-practices-for-api-testing-with-postman)
-- [Conclusion](#conclusion)
+  - [Conclusion](#conclusion)
 
 ---
 

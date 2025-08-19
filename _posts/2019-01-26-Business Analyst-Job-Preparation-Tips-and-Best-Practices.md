@@ -1,7 +1,10 @@
 ---
 layout: post
 title: Your Complete Roadmap to Landing a Business Analyst Job in 2025
-subtitle: Business Analyst Job Preparation Tips and Best Practices   
+subtitle: Business Analyst Job Preparation Tips and Best Practices  
+date: 2019-01-26
+author: "Rafayet Hossain"
+
 tags:
   [
        project management,

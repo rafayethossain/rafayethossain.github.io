@@ -2,7 +2,7 @@
 layout: post
 title: "A/B Testing for Business Analysts: A Practical Guide"
 subtitle: "Master A/B testing as a business analyst. This practical guide covers everything from hypothesis to analysis, helping you make data-driven decisions and optimize products for success."
-date: 2025-07-28 11:00:00 +0600
+date: 2019-04-06
 author: "Rafayet Hossain"
 description: "Master A/B testing as a business analyst. This practical guide covers everything from hypothesis to analysis, helping you make data-driven decisions and optimize products for success."
 tags: [a/b testing, split testing, business analysis, data-driven decision making, conversion rate optimization]
@@ -33,10 +33,21 @@ This comprehensive guide is your roadmap to mastering A/B testing. We'll demysti
 
 ## Table of Contents
 
+- [Introduction](#introduction)
 - [Key Takeaways](#key-takeaways)
+- [Table of Contents](#table-of-contents)
 - [What is A/B Testing?](#what-is-ab-testing)
 - [Why is A/B Testing Important for Business Analysts?](#why-is-ab-testing-important-for-business-analysts)
+  - [Real-World Impact for Business Analysts](#real-world-impact-for-business-analysts)
 - [The A/B Testing Process](#the-ab-testing-process)
+  - [Step 1: Formulate a Hypothesis](#step-1-formulate-a-hypothesis)
+  - [Step 2: Create Variations](#step-2-create-variations)
+  - [Step 3: Run the Test](#step-3-run-the-test)
+  - [Step 4: Analyze the Results](#step-4-analyze-the-results)
+  - [Step 5: Implement the Winner](#step-5-implement-the-winner)
+- [Challenges and Best Practices in A/B Testing](#challenges-and-best-practices-in-ab-testing)
+  - [Common Challenges:](#common-challenges)
+  - [Best Practices:](#best-practices)
 - [Tools for A/B Testing](#tools-for-ab-testing)
 - [Frequently Asked Questions (FAQ)](#frequently-asked-questions-faq)
 - [Conclusion](#conclusion)

@@ -2,7 +2,7 @@
 layout: post
 title: "From User Stories to Functional Specifications: A Comprehensive Guide"
 subtitle: "Bridging the Gap Between User Needs and Technical Implementation"
-date: 2025-07-30
+date: 2022-11-17
 author: "Rafayet Hossain"
 description: "Learn how to effectively translate high-level user stories into detailed functional specifications for successful software development. A step-by-step guide for Business Analysts."
 tags: [user stories, functional specifications, business analysis, software development, agile, requirements engineering]
@@ -35,20 +35,21 @@ This comprehensive guide will walk you through the essential concepts of user st
 ## Table of Contents
 
 - [Key Takeaways](#key-takeaways)
+- [Table of Contents](#table-of-contents)
 - [Understanding User Stories](#understanding-user-stories)
 - [Understanding Functional Specifications](#understanding-functional-specifications)
 - [Why the Transition is Necessary](#why-the-transition-is-necessary)
-- [The Transition Process: Step-by-Step](#the-transition-process-step-by-step)
-    - [Step 1: Deconstruct User Stories](#step-1-deconstruct-user-stories)
-    - [Step 2: Define Acceptance Criteria](#step-2-define-acceptance-criteria)
-    - [Step 3: Identify Granular Functional Requirements](#step-3-identify-granular-functional-requirements)
-    - [Step 4: Detail System Behavior and User Interface (UI)](#step-4-detail-system-behavior-and-user-interface-ui)
-    - [Step 5: Incorporate Non-Functional Requirements](#step-5-incorporate-non-functional-requirements)
-    - [Step 6: Structure the Functional Specification Document](#step-6-structure-the-functional-specification-document)
-    - [Step 7: Validate and Refine](#step-7-validate-and-refine)
+- [The Conversion Process: Step-by-Step](#the-conversion-process-step-by-step)
+  - [Step 1: Deconstruct User Stories](#step-1-deconstruct-user-stories)
+  - [Step 2: Define Acceptance Criteria](#step-2-define-acceptance-criteria)
+  - [Step 3: Identify Granular Functional Requirements](#step-3-identify-granular-functional-requirements)
+  - [Step 4: Detail System Behavior and User Interface (UI)](#step-4-detail-system-behavior-and-user-interface-ui)
+  - [Step 5: Incorporate Non-Functional Requirements](#step-5-incorporate-non-functional-requirements)
+  - [Step 6: Structure the Functional Specification Document](#step-6-structure-the-functional-specification-document)
+  - [Step 7: Validate and Refine](#step-7-validate-and-refine)
 - [Best Practices and Tips](#best-practices-and-tips)
 - [Common Pitfalls to Avoid](#common-pitfalls-to-avoid)
-- [Conclusion](#conclusion)
+  - [Conclusion](#conclusion)
 
 ---
 
